@@ -1,1 +1,148 @@
-
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+body{
+overflow:hidden;
+background:black;
+color:white;
+}
+#bg{
+position:fixed;
+inset:0;
+background-size:cover;
+background-position:center;
+filter:brightness(.45);
+z-index:-2;
+transition:1.5s;
+animation:
+bgZoom 15s ease-in-out infinite alternate,
+bgMove 20s linear infinite alternate;
+}
+@keyframes bgZoom{
+from{
+transform:scale(1);
+}
+to{
+transform:scale(1.15);
+}
+}
+@keyframes bgMove{
+from{
+background-position:center center;
+}
+to{
+background-position:center top;
+}
+}
+.overlay{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.25);
+z-index:-1;
+}
+.container{
+width:100%;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:25px;
+text-align:center;
+}
+.sticker{
+width:180px;
+height:180px;
+object-fit:contain;
+margin-bottom:20px;
+animation:float 4s ease-in-out infinite;
+transition:1s;
+}
+@keyframes float{
+0%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-15px);
+}
+100%{
+transform:translateY(0);
+}
+}
+h1{
+margin-bottom:15px;
+font-size:2rem;
+}
+p{
+max-width:500px;
+line-height:1.8;
+font-size:1.1rem;
+min-height:120px;
+}
+button{
+padding:14px 28px;
+border:none;
+border-radius:50px;
+font-size:18px;
+cursor:pointer;
+margin-top:25px;
+}
+#nextBtn{
+background:white;
+color:black;
+}
+#giftBtn{
+display:none;
+width:170px;
+height:170px;
+font-size:90px;
+border-radius:50%;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(10px);
+}
+#particles,
+#confetti{
+position:fixed;
+inset:0;
+pointer-events:none;
+overflow:hidden;
+}
+.particle{
+position:absolute;
+width:7px;
+height:7px;
+border-radius:50%;
+ background:#7ee7ff;
+    box-shadow:
+        0 0 10px #7ee7ff,
+        0 0 20px #7ee7ff;
+opacity:.5;
+animation:fall linear infinite;
+}
+@keyframes fall{
+from{
+transform:translateY(-20px);
+}
+to{
+transform:translateY(110vh);
+}
+}
+.confetti{
+position:absolute;
+width:10px;
+height:10px;
+animation:confettiFall 3s linear forwards;
+}
+@keyframes confettiFall{
+0%{
+transform:translateY(-50px) rotate(0);
+opacity:1;
+}
+100%{
+transform:translateY(110vh) rotate(720deg);
+opacity:0;
+}
+}
