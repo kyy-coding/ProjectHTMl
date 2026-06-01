@@ -155,7 +155,7 @@ const p =
 document.createElement("div");
 
 p.className =
-"particle";
+"story-particle";
 
 p.style.left =
 Math.random()*100+"vw";
