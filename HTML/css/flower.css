@@ -12,7 +12,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  min-height: 120vh;
+  min-height: 100vh;
   background-color: var(--dark-color);
   overflow: hidden;
   perspective: 1000px;
@@ -24,7 +24,7 @@
 .flowers{
   visibility:visible;
 }
-.flower-particle{
+.particle{
     position:fixed;
     width:4px;
     height:4px;
