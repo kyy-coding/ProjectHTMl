@@ -51,16 +51,15 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 padding:25px;
-padding-bottom:80px;
 text-align:center;
 }
 .sticker{
-width:min(40vw,220px);
-height:min(40vw,220px);
+width:180px;
+height:180px;
 object-fit:contain;
 margin-bottom:20px;
-animation:float 2s ease-in-out infinite;
-transition:0.5s;
+animation:float 4s ease-in-out infinite;
+transition:1s;
 }
 @keyframes float{
 0%{
@@ -89,7 +88,7 @@ border:none;
 border-radius:50px;
 font-size:18px;
 cursor:pointer;
-margin-top:40px;
+margin-top:25px;
 }
 #nextBtn{
 background:white;
@@ -98,9 +97,8 @@ color:black;
 #giftBtn{
 display:none;
 width:170px;
-height:90px;
+height:170px;
 font-size:90px;
-margin-top:10px;
 border-radius:50%;
 background:rgba(255,255,255,.15);
 backdrop-filter:blur(10px);
