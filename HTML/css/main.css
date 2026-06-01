@@ -18,22 +18,16 @@ filter:brightness(.45);
 z-index:-2;
 transition:1.5s;
 animation:
-bgZoom 20s ease-in-out infinite alternate;
-}
-#bg{
-    transform-origin:center;
+bgZoom 15s ease-in-out infinite alternate,
+bgMove 20s linear infinite alternate;
 }
 @keyframes bgZoom{
-    from{
-        transform:
-        scale(1)
-        translateY(0);
-    }
-    to{
-        transform:
-        scale(1.15)
-        translateY(-30px);
-    }
+from{
+transform:scale(1);
+}
+to{
+transform:scale(1.15);
+}
 }
 @keyframes bgMove{
 from{
@@ -51,18 +45,17 @@ z-index:-1;
 }
 .container{
 width:100%;
-min-height:100vh;
-display:flex-start;
+height:100vh;
+display:flex;
 flex-direction:column;
-justify-content:c;
+justify-content:center;
 align-items:center;
-padding-top:8vh;
 padding:25px;
 text-align:center;
 }
 .sticker{
-width:min(30vw,180px);
-height:min(30vwm,180px;
+width:180px;
+height:180px;
 object-fit:contain;
 margin-bottom:20px;
 animation:float 4s ease-in-out infinite;
@@ -103,21 +96,21 @@ color:black;
 }
 #giftBtn{
 display:none;
-width:min(25vw,170px);
-height:min(25vw,170px);
-font-size:min(12vw,90px);
+width:170px;
+height:170px;
+font-size:90px;
 border-radius:50%;
 background:rgba(255,255,255,.15);
 backdrop-filter:blur(10px);
 }
-#story-particles,
+#particles,
 #confetti{
 position:fixed;
 inset:0;
 pointer-events:none;
 overflow:hidden;
 }
-.story-particle{
+.particle{
 position:absolute;
 width:7px;
 height:7px;
