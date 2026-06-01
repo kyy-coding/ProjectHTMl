@@ -51,6 +51,7 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 padding:25px;
+padding-bottom:80px;
 text-align:center;
 }
 .sticker{
@@ -58,7 +59,7 @@ width:min(40vw,220px);
 height:(40vw,220px);
 object-fit:contain;
 margin-bottom:20px;
-animation:float 4s ease-in-out infinite;
+animation:float 2s ease-in-out infinite;
 transition:1s;
 }
 @keyframes float{
