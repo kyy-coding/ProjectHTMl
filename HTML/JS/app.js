@@ -149,48 +149,64 @@ giftBtn.onclick = ()=>{
     },1500);
 };
 
-/* ==========================
-   PARTICLES
-========================= */
 for(let i=0;i<40;i++){
+
 const p =
 document.createElement("div");
+
 p.className =
 "particle";
+
 p.style.left =
 Math.random()*100+"vw";
+
 p.style.animationDuration =
 (4+Math.random()*6)+"s";
+
 p.style.animationDelay =
 Math.random()*5+"s";
+
 document
 .getElementById("particles")
 .appendChild(p);
+
 }
 
 /* ==========================
    CONFETTI
 ========================== */
+
 function createConfetti(){
+
 const container =
 document.getElementById("confetti");
+
 for(let i=0;i<150;i++){
+
 const c =
 document.createElement("div");
+
 c.className =
 "confetti";
+
 c.style.left =
 Math.random()*100+"vw";
+
 c.style.background =
 `hsl(${Math.random()*360},100%,50%)`;
+
 container.appendChild(c);
+
 setTimeout(()=>{
 c.remove();
 },3000);
+
 }
+
 }
+
 /* ==========================
    START
 ========================== */
-loadPage(0);
 
+loadPage(0);
