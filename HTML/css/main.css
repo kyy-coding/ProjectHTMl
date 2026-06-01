@@ -54,8 +54,8 @@ padding:25px;
 text-align:center;
 }
 .sticker{
-width:180px;
-height:180px;
+width:min(40vw,220px);
+height:(40vw,220px);
 object-fit:contain;
 margin-bottom:20px;
 animation:float 4s ease-in-out infinite;
@@ -99,6 +99,7 @@ display:none;
 width:170px;
 height:170px;
 font-size:90px;
+margin-top:10px;
 border-radius:50%;
 background:rgba(255,255,255,.15);
 backdrop-filter:blur(10px);
