@@ -60,7 +60,7 @@ height:(40vw,220px);
 object-fit:contain;
 margin-bottom:20px;
 animation:float 2s ease-in-out infinite;
-transition:1s;
+transition:0.5s;
 }
 @keyframes float{
 0%{
