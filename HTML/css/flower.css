@@ -24,7 +24,7 @@
 .flowers{
   visibility:visible;
 }
-.particle{
+.flower-particle{
     position:fixed;
     width:4px;
     height:4px;
