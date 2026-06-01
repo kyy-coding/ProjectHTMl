@@ -1,0 +1,409 @@
+/* ==========================================
+   GIFT STORY — style.css
+   ========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Caveat&family=Nunito+Sans:wght@400;700&display=swap');
+
+:root {
+  --font-main:    'Quicksand', sans-serif;
+  --font-body:    'Nunito Sans', sans-serif;
+  --font-accent:  'Caveat', cursive;
+  --particle-clr: #7ee7ff;
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background: black;
+  color: white;
+  font-family: var(--font-main);
+}
+
+/* ---- Background ---- */
+#bg {
+  position: fixed;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(.45);
+  z-index: -2;
+  transition: 1.5s;
+  animation:
+    bgZoom 15s ease-in-out infinite alternate,
+    bgMove  20s linear    infinite alternate;
+}
+
+@keyframes bgZoom {
+  from { transform: scale(1); }
+  to   { transform: scale(1.15); }
+}
+
+@keyframes bgMove {
+  from { background-position: center center; }
+  to   { background-position: center top; }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.25);
+  z-index: -1;
+}
+
+/* ---- Loading overlay ---- */
+#loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  transition: opacity .8s ease;
+}
+#loading-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.loading-message {
+  font-family: var(--font-main);
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  line-height: 1.8;
+  opacity: .8;
+}
+
+/* ---- Main container ---- */
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  text-align: center;
+}
+
+/* ---- Sticker ---- */
+.sticker {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  animation: float 4s ease-in-out infinite;
+  transition: 1s;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+/* ---- Typography ---- */
+h1 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+  font-family: var(--font-main);
+}
+
+p {
+  max-width: 500px;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  font-family: var(--font-body);
+  min-height: 120px;
+  color: white;
+}
+
+/* ---- Buttons ---- */
+button {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 25px;
+}
+
+#nextBtn {
+  background: white;
+  color: black;
+  font-family: var(--font-main);
+  font-weight: 700;
+  transition: transform .2s, box-shadow .2s;
+}
+#nextBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,255,255,.4);
+}
+
+#giftBtn {
+  display: none;
+  width: 170px;
+  height: 170px;
+  font-size: 90px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.15);
+  backdrop-filter: blur(10px);
+  transition: transform .3s, box-shadow .3s;
+}
+#giftBtn:hover {
+  transform: scale(1.08) rotate(5deg);
+  box-shadow: 0 0 40px rgba(255,200,100,.5);
+}
+
+/* ---- Particles ---- */
+#particles,
+#confetti,
+#flowers {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.particle {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--particle-clr);
+  box-shadow: 0 0 10px var(--particle-clr), 0 0 20px var(--particle-clr);
+  opacity: .5;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  from { transform: translateY(-20px); }
+  to   { transform: translateY(110vh); }
+}
+
+/* ---- Confetti ---- */
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  animation: confettiFall 3s linear forwards;
+}
+
+@keyframes confettiFall {
+  0%   { transform: translateY(-50px) rotate(0); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+}
+
+/* ==========================================
+   FLOWER BLOOM EFFECT
+   ========================================== */
+
+/* Container bunga */
+.flower-wrap {
+  position: absolute;
+  pointer-events: none;
+  animation: flowerRise 3.5s ease-out forwards;
+}
+
+@keyframes flowerRise {
+  0%   { transform: translateY(0) scale(0); opacity: 0; }
+  15%  { opacity: 1; }
+  60%  { transform: translateY(-35vh) scale(1); opacity: 1; }
+  100% { transform: translateY(-60vh) scale(.7); opacity: 0; }
+}
+
+/* Tangkai */
+.flower-stem {
+  width: 3px;
+  height: 0;
+  background: linear-gradient(to top, #4caf50, #81c784);
+  margin: 0 auto;
+  border-radius: 3px;
+  animation: stemGrow .6s .1s ease-out forwards;
+  transform-origin: bottom;
+}
+
+@keyframes stemGrow {
+  from { height: 0; }
+  to   { height: 55px; }
+}
+
+/* Kepala bunga */
+.flower-head {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  transform: scale(0);
+  animation: bloomIn .7s .6s cubic-bezier(.17,.67,.34,1.5) forwards;
+}
+
+@keyframes bloomIn {
+  0%   { transform: scale(0) rotate(-30deg); }
+  70%  { transform: scale(1.15) rotate(5deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+/* Kelopak */
+.petal {
+  position: absolute;
+  width: 22px;
+  height: 32px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  opacity: .92;
+  animation: petalOpen .5s .9s ease-out forwards;
+  transform: translate(-50%, -100%) rotate(calc(var(--i) * 45deg)) scaleY(0);
+}
+
+@keyframes petalOpen {
+  from { transform: translate(-50%, -100%) rotate(calc(var(--i) * 45deg)) scaleY(0); }
+  to   { transform: translate(-50%, -100%) rotate(calc(var(--i) * 45deg)) scaleY(1); }
+}
+
+/* Warna kelopak per indeks */
+.petal:nth-child(1)  { --i:0;  background: radial-gradient(#ff6eb4, #e91e8c); }
+.petal:nth-child(2)  { --i:1;  background: radial-gradient(#ff9ee2, #e91e8c); }
+.petal:nth-child(3)  { --i:2;  background: radial-gradient(#ff6eb4, #c2185b); }
+.petal:nth-child(4)  { --i:3;  background: radial-gradient(#ffb3d9, #e91e8c); }
+.petal:nth-child(5)  { --i:4;  background: radial-gradient(#ff6eb4, #e91e8c); }
+.petal:nth-child(6)  { --i:5;  background: radial-gradient(#ff9ee2, #c2185b); }
+.petal:nth-child(7)  { --i:6;  background: radial-gradient(#ffd6ea, #e91e8c); }
+.petal:nth-child(8)  { --i:7;  background: radial-gradient(#ff6eb4, #c2185b); }
+
+/* Variasi warna bunga (class tambahan) */
+.flower-wrap.pink  .petal { filter: hue-rotate(0deg); }
+.flower-wrap.red   .petal { filter: hue-rotate(-30deg); }
+.flower-wrap.lilac .petal { filter: hue-rotate(60deg); }
+.flower-wrap.peach .petal { filter: hue-rotate(-15deg) saturate(1.3); }
+.flower-wrap.white .petal { filter: saturate(0) brightness(1.7); }
+
+/* Serbuk sari (tengah bunga) */
+.flower-center {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: radial-gradient(#ffe57f, #f9a825);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: centerPop .4s 1.3s cubic-bezier(.17,.67,.34,1.5) forwards;
+  box-shadow: 0 0 8px rgba(255,220,50,.7);
+  z-index: 2;
+}
+
+@keyframes centerPop {
+  from { transform: translate(-50%, -50%) scale(0); }
+  to   { transform: translate(-50%, -50%) scale(1); }
+}
+
+/* Butiran serbuk kecil */
+.pollen {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ffe57f;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  animation: pollenFly 1.2s 1.4s ease-out forwards;
+}
+
+@keyframes pollenFly {
+  0%   { transform: translate(-50%,-50%) scale(0); opacity: 1; }
+  100% {
+    transform: translate(
+      calc(-50% + var(--dx)),
+      calc(-50% + var(--dy))
+    ) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Daun kecil */
+.leaf {
+  position: absolute;
+  width: 14px;
+  height: 22px;
+  background: linear-gradient(135deg, #66bb6a, #388e3c);
+  border-radius: 50% 0 50% 0;
+  top: -12px;
+  transform: scaleX(0);
+  transform-origin: center bottom;
+  animation: leafSpread .5s 1s ease-out forwards;
+}
+
+.leaf.left  { left: -14px; transform-origin: right bottom; }
+.leaf.right { right: -14px; transform-origin: left bottom; transform: scaleX(0) scaleY(-1); }
+
+@keyframes leafSpread {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* ---- Hati berjatuhan (dari Gabut.html) ---- */
+.fa-heart-custom {
+  color: white;
+  font-size: 18px;
+  position: fixed;
+  top: -10vh;
+  opacity: .3;
+  z-index: 15;
+  animation: heartMove linear 1 forwards;
+  pointer-events: none;
+}
+
+@keyframes heartMove {
+  0%   { transform: translateY(-10vh); }
+  100% { transform: translateY(110vh); }
+}
+
+/* ---- Scroll arrow ---- */
+#scrollArrow {
+  position: fixed;
+  bottom: 15vh;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+#scrollArrow.visible { opacity: 1; }
+
+.tombol-arrow {
+  background: rgba(255,255,255,.25);
+  border-radius: 50px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .2s ease;
+  border: none;
+}
+
+.tombol-arrow:hover {
+  background: rgba(255,255,255,.45);
+  transform: translateY(3px);
+}
+
+.tombol-arrow svg {
+  fill: white;
+  width: 22px;
+  height: 22px;
+}

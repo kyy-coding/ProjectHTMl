@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Story</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Caveat&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background layer -->
+  <div id="bg"></div>
+  <div class="overlay"></div>
+
+  <!-- Loading overlay -->
+  <div id="loading-overlay">
+    <div class="loading-message">Hai kamu!<br>Tunggu dulu ya..</div>
+  </div>
+
+  <!-- Audio -->
+  <audio id="music" loop></audio>
+
+  <!-- Effect layers -->
+  <div id="particles"></div>
+  <div id="confetti"></div>
+  <div id="flowers"></div>
+
+  <!-- Main content -->
+  <div class="container">
+    <img id="sticker" class="sticker" src="" alt="stiker">
+    <h1 id="title"></h1>
+    <p  id="text"></p>
+    <button id="nextBtn">Lanjut →</button>
+    <button id="giftBtn">🎁</button>
+  </div>
+
+  <!-- Scroll arrow (opsional) -->
+  <div id="scrollArrow">
+    <button class="tombol-arrow" onclick="document.getElementById('nextBtn').click()">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Script -->
+  <script src="main.js"></script>
+
+</body>
+</html>
