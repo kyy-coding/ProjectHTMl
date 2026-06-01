@@ -110,7 +110,9 @@
 
 .flowers {
   position: relative;
-  transform: scale(0.7);
+  transform:
+    translate(120px)
+    scale(0.7);
 }
 
 .flower {
