@@ -25,7 +25,7 @@ background:"https://kyy-coding.github.io/ProjectHTMl/background/background3.jpeg
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Sticker3.gif",
 title:"NEGRO",
 text:"Ibaratnya itu kayak hukum coulomb, tau kan yak definisi nya hukum coulomb",
-typewriter: false
+typewriter: true
 },
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/background4.jpeg",
