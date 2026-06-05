@@ -18,21 +18,18 @@ background:"https://kyy-coding.github.io/ProjectHTMl/background/background5.jpeg
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Sticker1.gif",
 title:"Terima Kasih ❤️",
 text:"Halaman kedua menggunakan efek mengetik. Setiap huruf akan muncul satu per satu."
-typewriter: true
 },
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/background3.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Sticker3.gif",
 title:"NEGRO",
 text:"Ibaratnya itu kayak hukum coulomb, tau kan yak definisi nya hukum coulomb"
-typewriter: true
 },
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/background4.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Sticker4.gif",
 title:"Hadiah Untukmu 🎁",
 text:"Klik tombol kado untuk melihat pesan terakhir."
-typewriter: true
 }
 ],
 finalPage:{
@@ -84,59 +81,43 @@ document.getElementById("giftBtn");
 let current = 0;
 
 function loadPage(index){
-
 const page =
 CONFIG.pages[index];
-
 bg.style.backgroundImage =
 `url(${page.background})`;
-
 sticker.src =
 page.sticker;
-
 title.textContent =
 page.title;
-
-if(page.typewriter){
-
-    clearTimeout(
-        typingTimeout
-    );
-
-    text.textContent = "";
-
-    typeWriter(
-        text,
-        page.text,
-        35
-    );
-
-}else{
-
-    text.textContent =
-    page.text;
-
+text.textContent =
+page.text;
+if(index === 1){
+text.textContent = "";
+typeWriter(
+text,
+page.text,
+35
+);
 }
-
 if(index === CONFIG.pages.length - 1){
-
-    nextBtn.style.display =
-    "none";
-
-    giftBtn.style.display =
-    "block";
-
+nextBtn.style.display = "none";
+giftBtn.style.display = "block";
 }else{
-
-    nextBtn.style.display =
-    "block";
-
-    giftBtn.style.display =
-    "none";
+nextBtn.style.display = "block";
+giftBtn.style.display = "none";
 
 }
 
 }
+
+nextBtn.onclick = ()=>{
+
+current++;
+
+loadPage(current);
+
+};
+
 /* ==========================
    TYPEWRITER
 ========================== */
@@ -168,64 +149,47 @@ giftBtn.onclick = ()=>{
     },1500);
 };
 
+/* ==========================
+   PARTICLES
+========================= */
 for(let i=0;i<40;i++){
-
 const p =
 document.createElement("div");
-
 p.className =
 "particle";
-
 p.style.left =
 Math.random()*100+"vw";
-
 p.style.animationDuration =
 (4+Math.random()*6)+"s";
-
 p.style.animationDelay =
 Math.random()*5+"s";
-
 document
 .getElementById("particles")
 .appendChild(p);
-
 }
 
 /* ==========================
    CONFETTI
 ========================== */
-
 function createConfetti(){
-
 const container =
 document.getElementById("confetti");
-
 for(let i=0;i<150;i++){
-
 const c =
 document.createElement("div");
-
 c.className =
 "confetti";
-
 c.style.left =
 Math.random()*100+"vw";
-
 c.style.background =
 `hsl(${Math.random()*360},100%,50%)`;
-
 container.appendChild(c);
-
 setTimeout(()=>{
 c.remove();
 },3000);
-
 }
-
 }
-
 /* ==========================
    START
 ========================== */
-
 loadPage(0);
