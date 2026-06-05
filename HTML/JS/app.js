@@ -84,14 +84,20 @@ function loadPage(index){
 
 const page = CONFIG.pages[index];
 
+if(!page) return;
+
 bg.style.backgroundImage =
 `url(${page.background})`;
 
-sticker.src = page.sticker;
+sticker.src =
+page.sticker;
 
-title.textContent = page.title;
+title.textContent =
+page.title;
 
-if(page.typewriter){
+/* TYPEWRITER */
+
+if(page.typewriter === true){
 
 text.textContent = "";
 
@@ -103,19 +109,28 @@ page.text,
 
 }else{
 
-text.textContent = page.text;
+text.textContent =
+page.text;
 
 }
 
-if(index === CONFIG.pages.length - 1){
+/* BUTTON */
 
-nextBtn.style.display = "none";
-giftBtn.style.display = "block";
+if(index >= CONFIG.pages.length - 1){
+
+nextBtn.style.display =
+"none";
+
+giftBtn.style.display =
+"block";
 
 }else{
 
-nextBtn.style.display = "block";
-giftBtn.style.display = "none";
+nextBtn.style.display =
+"block";
+
+giftBtn.style.display =
+"none";
 
 }
 
@@ -142,6 +157,20 @@ speed
 typing();
 
 }
+
+let current = 0;
+
+nextBtn.onclick = ()=>{
+
+if(current < CONFIG.pages.length - 1){
+
+current++;
+
+loadPage(current);
+
+}
+
+};
 
 /* ==========================
    GIFT
