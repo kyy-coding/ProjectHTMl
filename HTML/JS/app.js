@@ -84,47 +84,59 @@ document.getElementById("giftBtn");
 let current = 0;
 
 function loadPage(index){
+
 const page =
 CONFIG.pages[index];
+
 bg.style.backgroundImage =
 `url(${page.background})`;
+
 sticker.src =
 page.sticker;
+
 title.textContent =
 page.title;
-text.textContent =
-page.text;
+
 if(page.typewriter){
+
+    clearTimeout(
+        typingTimeout
+    );
+
     text.textContent = "";
+
     typeWriter(
         text,
         page.text,
         35
     );
+
 }else{
+
     text.textContent =
     page.text;
 
 }
+
 if(index === CONFIG.pages.length - 1){
-nextBtn.style.display = "none";
-giftBtn.style.display = "block";
+
+    nextBtn.style.display =
+    "none";
+
+    giftBtn.style.display =
+    "block";
+
 }else{
-nextBtn.style.display = "block";
-giftBtn.style.display = "none";
+
+    nextBtn.style.display =
+    "block";
+
+    giftBtn.style.display =
+    "none";
 
 }
 
 }
-
-nextBtn.onclick = ()=>{
-
-current++;
-
-loadPage(current);
-
-};
-
 /* ==========================
    TYPEWRITER
 ========================== */
