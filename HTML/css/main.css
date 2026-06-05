@@ -103,7 +103,6 @@ border-radius:50%;
 background:rgba(255,255,255,.15);
 backdrop-filter:blur(10px);
 }
-#particles,
 #confetti{
 position:fixed;
 inset:0;
@@ -126,7 +125,10 @@ position:absolute;
 width:8px;
 height:8px;
 border-radius:50%;
-background:white;
+background:#7ee7ff;
+  box-shadow:
+      0 0 10px #7ee7ff,
+      0 0 20px #7ee7ff;
 opacity:.7;
 animation:floatUp linear infinite;
 }
