@@ -18,6 +18,10 @@
   perspective: 1000px;
 }
 
+.not-loaded #flower-scene *{
+animation-play-state:paused !important;
+}
+
 .not-loaded .flowers{
     visibility:hidden;
 }
