@@ -240,4 +240,17 @@ c.remove();
 /* ==========================
    START
 ========================== */
+
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+document.body.classList.remove(
+"not-loaded"
+);
+
+},300);
+
+});
+
 loadPage(0);
