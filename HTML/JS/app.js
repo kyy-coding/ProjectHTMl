@@ -186,36 +186,36 @@ giftBtn.onclick = ()=>{
    PARTICLES
 ========================== */
 
-const particleContainer =
+const particles =
 document.getElementById("particles");
 
-if(particleContainer){
+if(particles){
 
-for(let i = 0; i < 40; i++){
+for(let i=0;i<40;i++){
 
 const p =
 document.createElement("div");
 
-p.className = "particle";
+p.className =
+"particle";
 
 p.style.left =
-Math.random() * 100 + "vw";
+Math.random()*100+"vw";
 
 p.style.top =
-Math.random() * 100 + "vh";
+Math.random()*100+"vh";
 
 p.style.animationDuration =
-(4 + Math.random() * 6) + "s";
+(4+Math.random()*6)+"s";
 
 p.style.animationDelay =
-Math.random() * 5 + "s";
+Math.random()*5+"s";
 
-particleContainer.appendChild(p);
-
-}
+particles.appendChild(p);
 
 }
 
+}
 /* ==========================
    CONFETTI
 ========================== */
