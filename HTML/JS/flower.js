@@ -1,13 +1,27 @@
 function showFlowers(){
+
     const story =
     document.getElementById("story-container");
+
     const flowerScene =
     document.getElementById("flower-scene");
+
     if(story){
         story.style.display = "none";
     }
+
     if(flowerScene){
+
         flowerScene.classList.remove("hidden");
+
+        setTimeout(()=>{
+
+            document.body.classList.remove(
+                "not-loaded"
+            );
+
+        },100);
+
     }
-    document.body.classList.remove("not-loaded");
+
 }
