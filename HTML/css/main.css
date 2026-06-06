@@ -16,25 +16,17 @@ background-size:cover;
 background-position:center;
 filter:brightness(.45);
 z-index:-2;
-transition:1.5s;
+transition:
+background-image 1.5s ease;
 animation:
-bgZoom 15s ease-in-out infinite alternate,
-bgMove 20s linear infinite alternate;
+bgZoom 20s ease-in-out infinite alternate;
 }
 @keyframes bgZoom{
-from{
+0%{
 transform:scale(1);
 }
-to{
+100%{
 transform:scale(1.15);
-}
-}
-@keyframes bgMove{
-from{
-background-position:center center;
-}
-to{
-background-position:center top;
 }
 }
 .overlay{
@@ -52,6 +44,13 @@ justify-content:center;
 align-items:center;
 padding:25px;
 text-align:center;
+}
+.sticker,
+h1,
+p,
+button{
+position:relative;
+z-index:10;
 }
 .sticker{
 width:180px;
@@ -117,7 +116,7 @@ width:100%;
 height:100%;
 pointer-events:none;
 overflow:hidden;
-z-index:1;
+z-index:5;
 }
 
 .particle{
