@@ -13,24 +13,35 @@ function showFlowers(){
     if(flowerScene){
 
         flowerScene.classList.remove("hidden");
+
         const flowers =
         flowerScene.querySelector(".flowers");
+
         if(flowers){
-        flowers.style.opacity = "1";
-}
-        /* restart seluruh animasi */
+            flowers.style.opacity = "1";
+        }
+
         const animated =
         flowerScene.querySelectorAll(
-            ".flower__line, .grow-ans"
+        `
+        .flower__line,
+        .grow-ans,
+        .long-g,
+        .flower__leafs
+        `
         );
 
         animated.forEach(el=>{
+
+            const originalAnimation =
+            getComputedStyle(el).animation;
 
             el.style.animation = "none";
 
             void el.offsetWidth;
 
-            el.style.animation = "";
+            el.style.animation =
+            originalAnimation;
 
         });
 
