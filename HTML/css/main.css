@@ -58,8 +58,8 @@ width:180px;
 height:180px;
 object-fit:contain;
 margin-bottom:20px;
-animation:float 4s ease-in-out infinite;
-transition:1s;
+animation:float .2s ease-in-out infinite;
+transition:.2s;
 }
 @keyframes float{
 0%{
