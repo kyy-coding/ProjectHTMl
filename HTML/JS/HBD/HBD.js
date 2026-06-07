@@ -9,35 +9,36 @@ music:"https://kyy-coding.github.io/ProjectHTMl/Music/Mantra-Hujan-Kobo-Kanaeru.
 pages:[
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background1.jpeg",
-sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Sticker2.gif",
-title:"Halo 👋",
-text:"Ini adalah halaman pertama dengan background dan stiker yang berbeda."
+sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker1.gif",
+title:"HEEH KAMU",
+text:"Ini html pertamaku. Tolong tekan tombol lanjutnya pelan-pelan yaaa",
+typewriter: false
 },
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background2.jpeg",
-sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Sticker1.gif",
-title:"Terima Kasih ❤️",
-text:"Halaman kedua menggunakan efek mengetik. Setiap huruf akan muncul satu per satu.",
+sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker2.gif",
+title:"NAMA KAMU",
+text:"Hari ini tanggal 10 Juni 2026 yaa. Hari spesial bagi seseorang nih",
 typewriter: true
 },
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background3.jpeg",
-sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Sticker3.gif",
-title:"NEGRO",
-text:"Ibaratnya itu kayak hukum coulomb, tau kan yak definisi nya hukum coulomb",
+sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker3.gif",
+title:"Ini Apa?",
+text:"Ini hadiah dari anak Informatika. Walaupun hanya berupa html, buatnya tentunya gak sebentar sih. Catatan sedikit yak, gak bermaksud apa-apa hanya teman biasa yang memberikan hasil projeknya :D",
 typewriter: true
 },
 {
-background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background4.jpeg",
-sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Sticker4.gif",
-title:"Hadiah Untukmu 🎁",
-text:"Klik tombol kado untuk melihat pesan terakhir."
+background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background5.jpeg",
+sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker5.gif",
+title:"Kebanyakan Yapping",
+text:"Yaudah ;-;. Daripada lama-lama tekan tombol kado ini yak :)."
 }
 ],
 finalPage:{
 background:"assets/bg1.jpg",
-title:"🎉 Selamat 🎉",
-text:"Terima kasih sudah mencoba demo ini. Kamu bisa menambahkan halaman sebanyak yang kamu mau."
+title:"HAPPY BIRTHDAY NAMA KAMU",
+text:"Semoga sehat selalu, panjang umur, jadi anak yang berbakti kepada orang tua, dan keterima disekolah favorit yaaaa."
 }
 
 };
