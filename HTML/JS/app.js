@@ -176,7 +176,6 @@ loadPage(current);
    GIFT
 ========================== */
 giftBtn.onclick = ()=>{
-    createConfetti();
     setTimeout(()=>{
         showFlowers();
     },1500);
@@ -215,27 +214,6 @@ particles.appendChild(p);
 
 }
 
-}
-/* ==========================
-   CONFETTI
-========================== */
-function createConfetti(){
-const container =
-document.getElementById("confetti");
-for(let i=0;i<150;i++){
-const c =
-document.createElement("div");
-c.className =
-"confetti";
-c.style.left =
-Math.random()*100+"vw";
-c.style.background =
-`hsl(${Math.random()*360},100%,50%)`;
-container.appendChild(c);
-setTimeout(()=>{
-c.remove();
-},3000);
-}
 }
 /* ==========================
    START
