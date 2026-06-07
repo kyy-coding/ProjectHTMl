@@ -13,7 +13,11 @@ function showFlowers(){
     if(flowerScene){
 
         flowerScene.classList.remove("hidden");
-
+        const flowers =
+        flowerScene.querySelector(".flowers");
+        if(flowers){
+        flowers.style.opacity = "1";
+}
         /* restart seluruh animasi */
         const animated =
         flowerScene.querySelectorAll(
