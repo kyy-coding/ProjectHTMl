@@ -9,7 +9,7 @@ music:"https://kyy-coding.github.io/ProjectHTMl/Music/Mantra-Hujan-Kobo-Kanaeru.
 pages:[
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background1.jpeg",
-sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Makoto-Yuki/Sticker1.gif",
+sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker1.gif",
 title:"HEEH KAMU",
 text:"Ini html pertamaku. Tolong tekan tombol lanjutnya pelan-pelan yaaa",
 typewriter: false
@@ -29,10 +29,17 @@ text:"Ini hadiah dari anak Informatika. Walaupun hanya berupa html, buatnya tent
 typewriter: true
 },
 {
+background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background4.jpeg",
+sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker4.gif",
+title:"Tujuan buat ini apa?",
+text:"Aku buat ini, karena untuk mengisi waktu luangku. Awalnya tuh, mainan koordinat cartesius, baru tiba-tiba dapat ide buat bikin html gitu. Milih konsep html ini pun, karena keliatan standar untuk memulai pemrograman.",
+typewriter: true
+},   
+{
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background5.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker5.gif",
 title:"Kebanyakan Yapping",
-text:"Yaudah ;-;. Daripada lama-lama tekan tombol kado ini yak :)."
+text:"Yaudah. Daripada lama-lama tekan tombol kado ini yak."
 }
 ],
 finalPage:{
