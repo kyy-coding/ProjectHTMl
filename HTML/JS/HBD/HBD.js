@@ -9,7 +9,7 @@ music:"https://kyy-coding.github.io/ProjectHTMl/Music/Mantra-Hujan-Kobo-Kanaeru.
 pages:[
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background1.jpeg",
-sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker1.gif",
+sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Makoto-Yuki/Sticker1.gif",
 title:"HEEH KAMU",
 text:"Ini html pertamaku. Tolong tekan tombol lanjutnya pelan-pelan yaaa",
 typewriter: false
