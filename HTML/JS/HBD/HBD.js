@@ -9,14 +9,14 @@ music:"https://kyy-coding.github.io/ProjectHTMl/Music/Mantra-Hujan-Kobo-Kanaeru.
 pages:[
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background1.jpeg",
-sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker1.gif",
+sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/angry-cute-pout.gif",
 title:"HEEH KAMU",
 text:"Ini html pertamaku. Tolong tekan tombol lanjutnya pelan-pelan yaaa",
 typewriter: false
 },
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background2.jpeg",
-sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker2.gif",
+sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/gura-uwu-gura.gif",
 title:"NAMA KAMU",
 text:"Hari ini tanggal 10 Juni 2026 yaa. Hari spesial bagi seseorang nih",
 typewriter: true
@@ -37,7 +37,7 @@ typewriter: true
 },   
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background5.jpeg",
-sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker5.gif",
+sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/kobo-こぼ.gif",
 title:"Kebanyakan Yapping",
 text:"Yaudah. Daripada lama-lama tekan tombol kado ini yak."
 }
