@@ -176,8 +176,8 @@ loadPage(current);
    GIFT
 ========================== */
 giftBtn.onclick = ()=>{
+    showFlowers();
     setTimeout(()=>{
-        showFlowers();
     },1500);
 };
 
