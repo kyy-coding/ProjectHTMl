@@ -18,7 +18,7 @@ typewriter: false
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background2.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/gura-uwu-gura.gif",
 title:"NAMA KAMU",
-text:"Hari ini tanggal 10 Juni 2026 yaa. Hari spesial bagi seseorang nih",
+text:"Hari ini tanggal 10 Juni 2026 yaa. Hari spesial bagi seseorang nih. Daripada penasaran, yuk diklik tombol lanjutnya.",
 typewriter: true
 },
 {
