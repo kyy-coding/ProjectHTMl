@@ -9,7 +9,7 @@ music:"https://kyy-coding.github.io/ProjectHTMl/Music/Mantra-Hujan-Kobo-Kanaeru.
 pages:[
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background1.jpeg",
-sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/angry-cute-pout.gif",
+sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker1.gif",
 title:"HEEH KAMU",
 text:"Ini html pertamaku. Tolong tekan tombol lanjutnya pelan-pelan yaaa",
 typewriter: false
@@ -23,7 +23,7 @@ typewriter: true
 },
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background3.jpeg",
-sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker3.gif",
+sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker2.gif",
 title:"Ini Apa?",
 text:"Ini hadiah dari anak Informatika. Walaupun hanya berupa html, buatnya tentunya gak sebentar sih. Catatan sedikit yak, gak bermaksud apa-apa hanya teman biasa yang memberikan hasil projeknya :D",
 typewriter: true
