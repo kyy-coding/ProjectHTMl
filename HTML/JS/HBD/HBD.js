@@ -11,7 +11,7 @@ pages:[
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background1.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/kobo-kanaeru-こぼ.gif",
 title:"HEEH KAMU",
-text:"Ini html pertamaku. Tolong tekan tombol lanjutnya pelan-pelan yaaa",
+text:"Ini html pertamaku. Tolong tekan tombol lanjutnya pelan-pelan yaaa. Terus kalo pergantian sticker nya lambat, harap dimaklumi yak, soalnya performa hp sedikit ngaruh.",
 typewriter: false
 },
 {
