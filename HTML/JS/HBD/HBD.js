@@ -4,31 +4,31 @@
 
 const CONFIG = {
 
-music:"https://kyy-coding.github.io/ProjectHTMl/Music/music.mp3",
+music:"https://kyy-coding.github.io/ProjectHTMl/Music/Mantra_Hujan-Kobo_Kanaeru.mp3",
 
 pages:[
 {
-background:"https://kyy-coding.github.io/ProjectHTMl/background/background1.jpeg",
+background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background1.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Sticker2.gif",
 title:"Halo 👋",
 text:"Ini adalah halaman pertama dengan background dan stiker yang berbeda."
 },
 {
-background:"https://kyy-coding.github.io/ProjectHTMl/background/background5.jpeg",
+background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background2.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Sticker1.gif",
 title:"Terima Kasih ❤️",
 text:"Halaman kedua menggunakan efek mengetik. Setiap huruf akan muncul satu per satu.",
 typewriter: true
 },
 {
-background:"https://kyy-coding.github.io/ProjectHTMl/background/background3.jpeg",
+background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background3.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Sticker3.gif",
 title:"NEGRO",
 text:"Ibaratnya itu kayak hukum coulomb, tau kan yak definisi nya hukum coulomb",
 typewriter: true
 },
 {
-background:"https://kyy-coding.github.io/ProjectHTMl/background/background4.jpeg",
+background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background4.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Sticker4.gif",
 title:"Hadiah Untukmu 🎁",
 text:"Klik tombol kado untuk melihat pesan terakhir."
