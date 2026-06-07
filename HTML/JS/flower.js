@@ -14,13 +14,21 @@ function showFlowers(){
 
         flowerScene.classList.remove("hidden");
 
-        setTimeout(()=>{
+        /* restart seluruh animasi */
+        const animated =
+        flowerScene.querySelectorAll(
+            ".flower__line, .grow-ans"
+        );
 
-            document.body.classList.remove(
-                "not-loaded"
-            );
+        animated.forEach(el=>{
 
-        },100);
+            el.style.animation = "none";
+
+            void el.offsetWidth;
+
+            el.style.animation = "";
+
+        });
 
     }
 
