@@ -119,7 +119,14 @@ pointer-events:none;
 overflow:hidden;
 z-index:5;
 }
-
+.message-box{
+background:
+rgba(255,255,255,.08);
+backdrop-filter:blur(12px);
+padding:25px;
+border-radius:20px;
+width:min(90%,700px);
+}
 .particle{
 position:absolute;
 width:8px;
