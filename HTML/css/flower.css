@@ -27,6 +27,7 @@ animation-play-state:paused !important;
 }
 .flowers{
   opacity:1;
+  transition:opacity.5s ease;
 }
 .flower-particle{
     position:fixed;
