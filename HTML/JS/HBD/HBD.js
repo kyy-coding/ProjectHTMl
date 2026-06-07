@@ -4,7 +4,7 @@
 
 const CONFIG = {
 
-music:"https://kyy-coding.github.io/ProjectHTMl/Music/music.mp3",
+music:"https://kyy-coding.github.io/ProjectHTMl/Music/Mantra-Hujan-Kobo-Kanaeru.mp3",
 
 pages:[
 {
