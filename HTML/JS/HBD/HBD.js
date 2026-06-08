@@ -66,8 +66,8 @@ text:"Sebelum masuk ke bagian akhir halaman, aku juga mau minta maaf, kalo aku a
 typewriter: true
 },      
 {
-background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background9.jpeg",
-sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker9.gif",
+background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background10.jpeg",
+sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker10.gif",
 title:"Kebanyakan Yapping",
 text:"Yaudah. Daripada berlama-lama tekan tombol kado ini yak. Ingat i don't mean anything from this project.",
 typewriter: true   
