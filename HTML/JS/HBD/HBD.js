@@ -29,39 +29,39 @@ text:"Ini hadiah dari anak Informatika. Walaupun hanya berupa html, buatnya tent
 typewriter: true
 },
 {
-background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background3.jpeg",
-sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker2.gif",
-text:"Catatan sedikit sebelum lanjut yak. Aku gak bermaksud apa-apa hanya teman biasa yang memberikan hadiah berupa html yang sederhana :D",
-typewriter: true
-},   
-{
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background4.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker4.gif",
-title:"Tujuan buat ini apa?",
-text:"Aku dapat ide ini, ketika lagi mainan koordinat cartesius. Daripada penasaran, jadi mulai belajar pemrograman.",
+text:"Catatan sedikit sebelum lanjut yak. Aku gak bermaksud apa-apa hanya teman biasa yang memberikan hadiah berupa html yang sederhana :D",
 typewriter: true
 },   
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background5.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker5.gif",
-text:"Awalnya bingung mau buat html apa. Waktu itu ada dikirimin full data tanggal ulang tahun kalian, jadi aku buat ini deh",
+title:"Tujuan buat ini apa?",
+text:"Aku dapat ide ini, ketika lagi mainan koordinat cartesius. Daripada penasaran, jadi mulai belajar pemrograman.",
 typewriter: true
-},
+},   
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background6.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker6.gif",
-text:"Projek ini pun masih berkisaran mid-hard, jika gak dari awal tidak memahami Algoritma Pemrograman, so that's it.",
+text:"Awalnya bingung mau buat html apa. Waktu itu ada dikirimin full data tanggal ulang tahun kalian, jadi aku buat ini deh",
 typewriter: true
 },
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background7.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker7.gif",
-text:"Kalo diliat-liat kamu ini seseorang yang ramah ya, mudah bergaul, jarang kehabisan topik, dan asyik. That's from my opinion :D",
+text:"Projek ini pun masih berkisaran mid-hard, jika gak dari awal tidak memahami Algoritma Pemrograman, so that's it.",
 typewriter: true
 },
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background8.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker8.gif",
+text:"Kalo diliat-liat kamu ini seseorang yang ramah ya, mudah bergaul, jarang kehabisan topik, dan asyik. That's from my opinion :D",
+typewriter: true
+},
+{
+background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background9.jpeg",
+sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker9.gif",
 text:"Sebelum masuk ke bagian akhir halaman, aku juga mau minta maaf, kalo aku ada salah ke kamu baik dari kelas 7-9. I'm trying to be a better person.",
 typewriter: true
 },      
