@@ -9,37 +9,68 @@ music:"https://kyy-coding.github.io/ProjectHTMl/Music/Mantra-Hujan-Kobo-Kanaeru.
 pages:[
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background1.jpeg",
-sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/kobo-kanaeru-こぼ.gif",
+sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker1.gif",
 title:"HEEH KAMU",
 text:"Ini html pertamaku. Tolong tekan tombol lanjutnya pelan-pelan yaaa. Terus kalo pergantian sticker nya lambat, harap dimaklumi yak, soalnya performa hp sedikit ngaruh.",
 typewriter: true
 },
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background2.jpeg",
-sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/gura-uwu-gura.gif",
+sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker2.gif",
 title:"NAMA KAMU",
 text:"Hari ini tanggal 10 Juni 2026 yaa. Hari spesial bagi seseorang nih. Daripada penasaran, yuk diklik tombol lanjutnya.",
 typewriter: true
 },
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background3.jpeg",
-sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker2.gif",
+sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker3.gif",
 title:"Ini Apa?",
-text:"Ini hadiah dari anak Informatika. Walaupun hanya berupa html, buatnya tentunya gak sebentar sih. Catatan sedikit yak, gak bermaksud apa-apa hanya teman biasa yang memberikan hasil projeknya :D",
+text:"Ini hadiah dari anak Informatika. Walaupun hanya berupa html, buatnya tentunya gak sebentar sih.",
 typewriter: true
 },
+{
+background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background3.jpeg",
+sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker2.gif",
+text:"Catatan sedikit sebelum lanjut yak. Aku gak bermaksud apa-apa hanya teman biasa yang memberikan hadiah :D",
+typewriter: true
+},   
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background4.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker4.gif",
 title:"Tujuan buat ini apa?",
-text:"Aku buat ini, karena untuk mengisi waktu luangku. Awalnya tuh, mainan koordinat cartesius, baru tiba-tiba dapat ide buat bikin html gitu. Milih konsep html ini pun, karena keliatan standar untuk memulai pemrograman.",
+text:"Aku dapat ide ini, ketika lagi mainan koordinat cartesius. Daripada penasaran, jadi mulai belajar pemrograman.",
 typewriter: true
 },   
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background5.jpeg",
-sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/kobo-こぼ.gif",
+sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker5.gif",
+text:"Awalnya bingung mau buat html apa. Waktu itu ada dikirimin full data tanggal ulang tahun kalian, jadi aku buat ini deh",
+typewriter: true
+},
+{
+background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background6.jpeg",
+sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker6.gif",
+text:"Projek ini pun masih berkisaran mid-hard, jika gak dari awal tidak memahami Algoritma Pemrograman, so that's it.",
+typewriter: true
+},
+{
+background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background7.jpeg",
+sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker7.gif",
+text:"Kalo diliat-liat kamu ini seseorang yang ramah ya, mudah bergaul, jarang kehabisan topik, dan asyik. That's from my opinion :D",
+typewriter: true
+},
+{
+background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background8.jpeg",
+sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker8.gif",
+text:"Sebelum masuk ke bagian akhir halaman, aku juga mau minta maaf, kalo aku ada salah ke kamu baik dari kelas 7-9. I'm trying to be a better person.",
+typewriter: true
+},      
+{
+background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background9.jpeg",
+sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker9.gif",
 title:"Kebanyakan Yapping",
-text:"Yaudah. Daripada lama-lama tekan tombol kado ini yak."
+text:"Yaudah. Daripada berlama-lama tekan tombol kado ini yak. Ingat i don't mean anything from this project.",
+typewriter: true   
 }
 ],
 finalPage:{
