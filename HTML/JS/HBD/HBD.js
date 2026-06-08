@@ -25,13 +25,13 @@ typewriter: true
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background3.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker3.gif",
 title:"Ini Apa?",
-text:"Ini hadiah dari anak Informatika. Walaupun hanya berupa html, buatnya tentunya gak sebentar sih.",
+text:"Ini hadiah dari anak Informatika. Walaupun hanya berupa html, buatnya tentunya gak sebentar sih. I hope you appreciate at this project.",
 typewriter: true
 },
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background3.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker2.gif",
-text:"Catatan sedikit sebelum lanjut yak. Aku gak bermaksud apa-apa hanya teman biasa yang memberikan hadiah :D",
+text:"Catatan sedikit sebelum lanjut yak. Aku gak bermaksud apa-apa hanya teman biasa yang memberikan hadiah berupa html yang sederhana :D",
 typewriter: true
 },   
 {
