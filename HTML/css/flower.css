@@ -42,7 +42,7 @@ animation-play-state:paused !important;
     animation:floatParticle linear infinite;
 }
 .hidden{
-  display:none;
+  display:block;
 }
 @keyframes floatParticle{
     from{
