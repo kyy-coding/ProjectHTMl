@@ -17,7 +17,7 @@ typewriter: true
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background2.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker2.gif",
-title:"NAMA KAMU",
+title:"Aurellia Carissa",
 text:"Hari ini tanggal 10 Juni 2026 yaa. Hari spesial bagi seseorang nih. Daripada penasaran, yuk diklik tombol lanjutnya.",
 typewriter: true
 },
