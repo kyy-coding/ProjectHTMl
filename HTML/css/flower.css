@@ -79,7 +79,7 @@ animation-play-state:paused !important;
 }
 .sub-greeting{
     position:fixed;
-    top:20%;
+    top:18%;
     left:50%;
     transform:translateX(-50%);
     color:#cfffff;
