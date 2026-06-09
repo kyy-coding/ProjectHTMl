@@ -219,6 +219,41 @@ giftBtn.onclick = ()=>{
 };
 
 /* ==========================
+   RAIN EFFECT
+========================== */
+
+const rainContainer =
+document.getElementById("rain");
+
+if(rainContainer){
+
+for(let i=0;i<120;i++){
+
+const drop =
+document.createElement("div");
+
+drop.className =
+"rain-drop";
+
+drop.style.left =
+Math.random()*100 + "vw";
+
+drop.style.animationDuration =
+(0.8 + Math.random()*0.7) + "s";
+
+drop.style.animationDelay =
+Math.random()*2 + "s";
+
+drop.style.opacity =
+0.3 + Math.random()*0.7;
+
+rainContainer.appendChild(drop);
+
+}
+
+}
+
+/* ==========================
    PARTICLES
 ========================== */
 
