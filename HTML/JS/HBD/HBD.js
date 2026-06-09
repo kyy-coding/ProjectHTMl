@@ -50,7 +50,7 @@ typewriter: true
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background7.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker7.gif",
-text:"Projek ini pun masih berkisaran mid-hard. Jadi, ada bantuan dari beberapa tools juga, tapi gak semuanya. Dari projek ini tentnuya aku banyak belajar tentang coding, so that's it.",
+text:"Projek ini pun masih berkisaran mid-hard. Jadi, ada bantuan dari beberapa tools juga, tapi gak semuanya. Dari projek ini tentunya aku banyak belajar tentang coding, so that's it.",
 typewriter: true
 },
 {
