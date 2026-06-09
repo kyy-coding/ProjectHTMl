@@ -44,13 +44,13 @@ typewriter: true
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background6.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker6.gif",
-text:"Awalnya bingung mau buat html apa. Waktu itu ada dikirimin full data tanggal ulang tahun kalian, jadi aku buat ini deh",
+text:"Awalnya bingung mau buat html apa. Waktu itu ada dikirimin full data tanggal ulang tahun kalian, jadi aku buat ini deh.",
 typewriter: true
 },
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background7.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker7.gif",
-text:"Projek ini pun masih berkisaran mid-hard, jika gak dari awal tidak memahami Algoritma Pemrograman, so that's it.",
+text:"Projek ini pun masih berkisaran mid-hard. Jadi, ada bantuan dari beberapa tools juga, tapi gak semuanya. So that's it.",
 typewriter: true
 },
 {
@@ -62,7 +62,7 @@ typewriter: true
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background9.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker9.gif",
-text:"Sebelum masuk ke bagian akhir halaman, aku juga mau minta maaf, kalo aku ada salah ke kamu baik dari kelas 7-9. I'm trying to be a better person.",
+text:"Sebelum masuk ke bagian akhir halaman, aku juga mau minta maaf yaa, kalo aku ada salah ke kamu baik dari kelas 7-9. Kedepannya aku usahakan jadi orang yang lebih baik. Btw, server nya belum jadi cik :), karena ngestuck di JavaScript.",
 typewriter: true
 },      
 {
