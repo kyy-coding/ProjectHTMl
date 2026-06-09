@@ -25,7 +25,7 @@ typewriter: true
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background3.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker3.gif",
 title:"Ini Apa?",
-text:"Ini hadiah dari anak Informatika. Walaupun hanya berupa html, buatnya tentunya g  ak sebentar sih. I hope you liked this project.",
+text:"Ini hadiah dari anak Informatika. Walaupun hanya berupa html, buatnya tentunya gak sebentar sih. I hope you liked this project.",
 typewriter: true
 },
 {
@@ -44,7 +44,7 @@ typewriter: true
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background6.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker6.gif",
-text:"Awalnya bingung mau buat html apa. Waktu itu ada dikirimin full data tanggal ulang tahun kalian, jadi aku buat ini deh. Project sederhana yang bertujuan sebagai kenangan, walaupun enggak berwujud.",
+text:"Awalnya bingung mau buat html apa. Waktu itu ada dikirimin full data tanggal lahir kelas IX-A. Salah satunya tanggal lahir kamu, jadi aku buat ini deh. Project sederhana yang bertujuan sebagai kenangan, walaupun enggak berwujud.",
 typewriter: true
 },
 {
