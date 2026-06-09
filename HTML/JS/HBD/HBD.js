@@ -25,7 +25,7 @@ typewriter: true
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background3.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker3.gif",
 title:"Ini Apa?",
-text:"Ini hadiah dari anak Informatika. Walaupun hanya berupa html, buatnya tentunya gak sebentar sih. I hope you appreciate at this project.",
+text:"Ini hadiah dari anak Informatika. Walaupun hanya berupa html, buatnya tentunya g  ak sebentar sih. I hope you appreciate at this project.",
 typewriter: true
 },
 {
@@ -38,13 +38,13 @@ typewriter: true
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background5.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker5.gif",
 title:"Tujuan buat ini apa?",
-text:"Aku dapat ide ini, ketika lagi mainan koordinat cartesius. Daripada penasaran, jadi mulai belajar pemrograman.",
+text:"Aku dapat ide ini, ketika lagi mainan koordinat cartesius. Daripada penasaran, jadi mulai belajar pemrograman css, html, dan js deh. Semua itu tidak gampang, jika tidak berusaha.",
 typewriter: true
 },   
 {
 background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background6.jpeg",
 sticker:"https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker6.gif",
-text:"Awalnya bingung mau buat html apa. Waktu itu ada dikirimin full data tanggal ulang tahun kalian, jadi aku buat ini deh.",
+text:"Awalnya bingung mau buat html apa. Waktu itu ada dikirimin full data tanggal ulang tahun kalian, jadi aku buat ini deh. Project sederhana yang bertujuan sebagai kenangan, walaupun enggak berwujud.",
 typewriter: true
 },
 {
