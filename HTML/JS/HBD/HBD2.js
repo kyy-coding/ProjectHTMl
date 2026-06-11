@@ -148,7 +148,7 @@ audio = new Audio('' + linkmp3.src);
       const api = document.getElementById('apiLilin');
       api.classList.add('mati');
       setTimeout(() => {
-        pindahHal(5);
+        pindahHal(6);
       }, 1200); // Waktu setelah animasi mati selesai
     }
 
