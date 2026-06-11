@@ -134,7 +134,7 @@ audio = new Audio('' + linkmp3.src);
       gameJalan = false;
       // const status = document.getElementById('statusGame');
       if (sukses) {
-        setTimeout(()=>{document.getElementById(`hal2`).style = "transform:scale(0);transition:all .6s ease";setTimeout(()=>{pindahHal(3)}, 450);}, 730);
+        setTimeout(()=>{document.getElementById(`hal3`).style = "transform:scale(0);transition:all .6s ease";setTimeout(()=>{pindahHal(4)}, 450);}, 730);
         /*status.innerText = 'Yeay! Kamu mengenang semua momen kita! ðŸŒ¹';
         document.getElementById('lanjut').classList.remove('sembunyi');*/
       } else {
@@ -148,7 +148,7 @@ audio = new Audio('' + linkmp3.src);
       const api = document.getElementById('apiLilin');
       api.classList.add('mati');
       setTimeout(() => {
-        pindahHal(4);
+        pindahHal(5);
       }, 1200); // Waktu setelah animasi mati selesai
     }
 
@@ -218,12 +218,6 @@ audio = new Audio('' + linkmp3.src);
 	     }, 450);
 	     }
       }, 50);
-    }
-
-    // Share ke WhatsApp
-    function balasWa() {
-      const url = window.location.href;
-      window.open(`https://wa.me/?text=${textWhatsapp}`, '_blank');
     }
     
     const scrollContainer = document.getElementById("containerPesan");
