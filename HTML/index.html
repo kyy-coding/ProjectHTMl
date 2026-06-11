@@ -13,7 +13,7 @@
   <meta property="og:image:alt" content="hbd">
   <meta property="og:url" content="kado.feeldream.id">
   <meta property="og:type" content="website">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Handlee&family=Sriracha&display=swap" rel="stylesheet"><script src="https://kyy-coding.github.io/ProjectHTMl/HTML/css/HBD2.css"></script><link rel="stylesheet" href="https://htmlku.com/prod/kado/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Handlee&family=Sriracha&display=swap" rel="stylesheet"><script src="https://kyy-coding.github.io/ProjectHTMl/HTML/css/HBD.css"></script><link rel="stylesheet" href="https://htmlku.com/prod/kado/style.css">
 </head>
 <body>
   
@@ -24,7 +24,7 @@
   <div class="background-overlay" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDxPxdEWBDAyw0TWLqZ5z5Gzak103RGpxKBgW_m0kJ4-_ce2BflVdXqTHzbwGfcCzoC_jMrM3WSDbE9Rgj44d4NZC2oyykxuIfDblLQjdlCnU_qAvLw9qUH38FdpmDOYuOTtWFdIo8DUdS4xldaTxA17Ut_RjOSTb28jJMYDqN2yItm-v1OUomSHyeiyEz/s1600/89250.jpg"></div>
 
   <!-- Halaman 1: Envelope -->
-  <div id="hal1">
+   <div id="hal1">
     <div class="envlope-wrapper">
       <div id="envelope" class="close">
         <div class="front flap"></div>
@@ -36,6 +36,22 @@
             <p>Alooo Kamuu! ✨</p>
           </div>
         </div>
+        <div class="hearts">
+          <div class="heart a1"></div>
+          <div class="heart a2"></div>
+          <div class="heart a3"></div>
+        </div>
+        <div class="sparkles">
+          <div class="sparkle s1"></div>
+          <div class="sparkle s2"></div>
+          <div class="sparkle s3"></div>
+        </div>
+      </div>
+    </div>
+    <div class="reset">
+      <button style="border-radius: 20px;padding:4px 12px;margin-top:-25px" onclick="bukaEnvelope(2)">Buka</button>
+    </div>
+  </div>
    <!-- Halaman 2: Prologue -->      
   <div id="hal2" class="kotak sembunyi">
     <h2>Halo 👋</h2>
@@ -49,22 +65,8 @@
      Lanjut
     </button>
   </div>      
-      <div class="particles">
-       <div class="star st1"></div>
-       <div class="star st2"></div>
-        <div class="star st3"></div>
-        <div class="dust d1"></div>
-       <div class="dust d2"></div>
-        <div class="dust d3"></div>
-      </div>
-      </div>
-    </div>
-    <div class="reset">
-      <button style="border-radius: 20px;padding:4px 12px;margin-top:-25px" onclick="bukaEnvelope()">Buka</button>
-    </div>
-  </div>
 
-  <!-- Halaman 2: Memory Game -->
+  <!-- Halaman 3: Memory Game -->
   <div id="hal3" class="kotak sembunyi">
     <div class="decor decor-tl"></div>
     <div class="decor decor-br"></div>
@@ -78,8 +80,8 @@
     <button id="ulang" onclick="mulaiHal2()" class="tombolCadangan sembunyi">Coba Lagi!</button>
   </div>
 
-  <!-- Halaman 3: Make a Wish -->
-  <div id="hal3" class="kotak sembunyi">
+  <!-- Halaman 4: Make a Wish -->
+  <div id="hal4" class="kotak sembunyi">
     <div class="decor decor-tl"></div>
     <div class="decor decor-br"></div>
     <h2 style="font-size:18.5px">Make a Wish 🎉</h2>
@@ -118,8 +120,8 @@
     <button onclick="tiupLilin()">Tiup Lilin 🌬️</button>
   </div>
 
-  <!-- Halaman 4: Pesan Akhir (Lama Hal3) -->
-  <div id="hal4" class="kotak sembunyi">
+  <!-- Halaman 5: Pesan Akhir (Lama Hal3) -->
+  <div id="hal5" class="kotak sembunyi">
     <div class="decor decor-tl"></div>
     <div class="decor decor-br"></div>
     <!-- Stiker Gif -->
@@ -135,8 +137,10 @@
     </div>
     <button style="display:none" onclick="shareWa()">Kirim ke Dia!</button>
   </div>
+   <div class="reset">
   <div class="tombol">
     <button style="padding:4px 12px;" onclick="balasWa()">💌 Balas</button>
+  </div>
   </div>
   
   <!-- Circle Animation --><div><div><div class="circ"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div>
