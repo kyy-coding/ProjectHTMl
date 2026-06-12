@@ -153,7 +153,7 @@ audio = new Audio('' + linkmp3.src);
     }
 
     // Halaman 4: Pesan Akhir
-    function mulaiHal4() {
+    function mulaiHal6() {
       const stiker4 = document.getElementById('stiker4');
       const stiker4a = document.getElementById('stiker4a');
       const stiker4b = document.getElementById('stiker4b');
