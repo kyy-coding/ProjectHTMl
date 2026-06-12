@@ -13,30 +13,30 @@ document.querySelector(".background-overlay");
 const CONFIG = {
 pages: [
 {
- background:"",
+ background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background2.jpeg",
  sticker:"",
- title:"",
+ title:"HAAAA",
  text:"",
  type:"welcome"
 },
 {
  background:"",
  sticker:"",
- title:"",
+ title:"HAIIIII",
  text:"",
  type:"memory"
 },
 {
  background:"",
  sticker:"",
- title:"",
+ title:"HHHDHSHUHD",
  text:"",
  type:"quote"
 },
 {
  background:"",
  sticker:"",
- title:"",
+ title:"AAAAAA",
  text:"",
  type:"quote"
 },
@@ -47,7 +47,7 @@ pages: [
 {
  background:"",
  sticker:"",
- title:"",
+ title:"ARAHABAKIIIII",
  text:"",
  type:"ending"
         }
