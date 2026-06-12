@@ -22,32 +22,32 @@ pages: [
  type:"welcome"
 },
 {
- background:"",
+ background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background3.jpeg",
  sticker:"",
  title:"HAIIIII",
  text:"",
  type:"memory"
 },
 {
- background:"",
+ background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background4.jpeg",
  sticker:"",
  title:"HHHDHSHUHD",
  text:"hehehehe",
  type:"quote"
 },
 {
- background:"",
+ background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background5.jpeg",
  sticker:"",
  title:"AAAAAA",
  text:"hehehehheheheh",
  type:"quote"
 },
 {
- background:"",
+ background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background6.jpeg",
  type:"gift"
 },
 {
- background:"",
+ background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background7.jpeg",
  sticker:"",
  title:"ARAHABAKIIIII",
  text:"hehehehehe",
