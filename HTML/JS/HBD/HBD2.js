@@ -15,7 +15,7 @@ document.querySelector(".background-overlay");
 const CONFIG = {
 pages: [
 {
- background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background2.jpeg",
+ background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background9.jpeg",
  sticker:"",
  title:"HAAAA",
  text:"hehehehehehee",
