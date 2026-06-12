@@ -52,103 +52,54 @@
       <button style="border-radius: 20px;padding:4px 12px;margin-top:-25px" onclick="bukaEnvelope(2)">Buka</button>
     </div>
   </div>
-   <!-- Halaman 2: Prologue -->      
-  <div id="hal2" class="kotak sembunyi">
-    <h2>Halo 👋</h2>
-    <p>
-     Semoga kamu suka hadiah kecil ini ✨
-     Aku sudah menyiapkan beberapa
-     hal spesial untuk kamu.
-     Yuk lanjut dulu 😆
-    </p>
-    <button onclick="pindahHal(3)">
-     Lanjut
-    </button>
-  </div>      
-
-  <!-- Halaman 3: Memory Game -->
-  <div id="hal3" class="kotak sembunyi">
-    <div class="decor decor-tl"></div>
-    <div class="decor decor-br"></div>
-    <canvas id="game-canvas"></canvas>
-    <h2 style="font-size:18.5px">A Little Game for You 🎁</h2>
-    <p style="font-size:14.5px">Balik 2 Kartu yang Sama! 🫣</p>
+  <div id="story-container" class="sembunyi">
+    <img id="sticker"
+         src=""
+         alt="Sticker">
+    <h2 id="title"></h2>
+    <p id="text"></p>
+	 <div id="memory-container" class="sembunyi">
     <div id="kotakPesan"></div>
     <div id="papanGame" class="papanGame"></div>
     <p id="statusGame"></p>
-    <button id="lanjut" onclick="pindahHal(4)" class="sembunyi">Lihat Pesan Cinta!</button>
-    <button id="ulang" onclick="mulaiHal2()" class="tombolCadangan sembunyi">Coba Lagi!</button>
-  </div>
-
-  <!-- Halaman 4: Prologue -->      
-  <div id="hal4" class="kotak sembunyi">
-    <h2>Halo 👋</h2>
-    <p>
-    Wuih, jago nih. 
-    </p>
-    <button onclick="pindahHal(5)">
-     Lanjut
-    </button>
-  </div>      
-  <!-- Halaman 5: Make a Wish -->
-  <div id="hal5" class="kotak sembunyi">
-    <div class="decor decor-tl"></div>
-    <div class="decor decor-br"></div>
-    <h2 style="font-size:18.5px">Make a Wish 🎉</h2>
-    <img src="https://htmlku.com/0/panda/kue.gif" style="width: 0; /*width: 150px; */height: auto; margin: 10px auto; display: block;" />
-    <!-- Kue + Lilin CSS -->
+</div>
+	<div id="gift-container" class="sembunyi">
     <div class="kue-container">
     <div class="lilin-container">
-        <div class="lilin">
-        <div class="api" id="apiLilin"></div>
-        </div>
-    </div>
-
+    <div class="lilin">
+    <div class="api" id="apiLilin"></div>
+</div>
+</div>
     <div class="kue">
-        <div class="lapisan lapisan-atas">
-        <div class="krim"></div>
-        <div class="krim"></div>
-        <div class="krim"></div>
-        </div>
-        <div class="lapisan lapisan-tengah">
-        <div class="coklat"></div>
-        <div class="coklat"></div>
-        <div class="coklat"></div>
-        <div class="coklat"></div>
-        </div>
-        <div class="lapisan lapisan-bawah">
-        <div class="coklat"></div>
-        <div class="coklat"></div>
-        <div class="coklat"></div>
-        <div class="coklat"></div>
-        <div class="coklat"></div>
-        </div>
-    </div>
-    </div>
-
-    <p style="font-size:14.5px">Tutup matamu, buat permintaan,<br>lalu tiup lilinnya yaw! 🫣</p>
-    <button onclick="tiupLilin()">Tiup Lilin 🌬️</button>
-  </div>
-
-  <!-- Halaman 6: Pesan Akhir (Lama Hal3) -->
-  <div id="hal6" class="kotak sembunyi">
-    <div class="decor decor-tl"></div>
-    <div class="decor decor-br"></div>
-    <!-- Stiker Gif -->
-    <div id="stiker4" class="stiker">
-        <img id="stiker4a" src="https://htmlku.com/0/panda/kue.gif" />
-        <img id="stiker4b" class="sembunyi" src="https://htmlku.com/0/panda/semprot.gif" />
-        <img id="stiker4c" class="sembunyi" src="https://htmlku.com/0/panda/terlope.gif" />
-    </div>
-    <div id="containerPesan">
-	    <p id="teksCinta"></p>
-	    <p id="pesanAkhir"></p>
-	    <p id="teksLucu"></p>
-    </div>
-  </div>
-   <div class="reset">
-  </div>
-  
+    <div class="lapisan lapisan-atas">
+    <div class="krim"></div>
+    <div class="krim"></div>
+    <div class="krim"></div>
+</div>
+    <div class="lapisan lapisan-tengah">
+    <div class="coklat"></div>
+    <div class="coklat"></div>
+    <div class="coklat"></div>
+    <div class="coklat"></div>
+</div>
+    <div class="lapisan lapisan-bawah">
+    <div class="coklat"></div>
+    <div class="coklat"></div>
+    <div class="coklat"></div>
+    <div class="coklat"></div>
+    <div class="coklat"></div>
+</div>
+</div>
+</div>
+    <button onclick="tiupLilin()">
+        Tiup Lilin 🌬️
+    </button>
+</div>
+    <div id="special-content"></div>
+    <button id="nextBtn">
+        Lanjut →
+    </button>
+</div>
   <!-- Circle Animation --><div><div><div class="circ"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div>
 
   <script>
