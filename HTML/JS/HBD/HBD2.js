@@ -18,7 +18,7 @@ pages: [
  background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background2.jpeg",
  sticker:"",
  title:"HAAAA",
- text:"",
+ text:"hehehehehehee",
  type:"welcome"
 },
 {
@@ -32,14 +32,14 @@ pages: [
  background:"",
  sticker:"",
  title:"HHHDHSHUHD",
- text:"",
+ text:"hehehehe",
  type:"quote"
 },
 {
  background:"",
  sticker:"",
  title:"AAAAAA",
- text:"",
+ text:"hehehehheheheh",
  type:"quote"
 },
 {
@@ -50,7 +50,7 @@ pages: [
  background:"",
  sticker:"",
  title:"ARAHABAKIIIII",
- text:"",
+ text:"hehehehehe",
  type:"ending"
         }
     ]
@@ -175,7 +175,10 @@ pages: [
     } 
 //Fungsi loadPage
    function loadPage(index){
-
+ document
+  .getElementById("story-container")
+  .classList.remove("sembunyi");
+	   
  const page = CONFIG.pages[index];
 
  title.textContent = page.title || "";
