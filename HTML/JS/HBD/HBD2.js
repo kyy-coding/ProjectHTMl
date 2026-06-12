@@ -1,4 +1,6 @@
-// config background, stiker, dan teks
+// config background, stiker, musik dan teks
+const audio =
+document.getElemenById("linkmp3");
 const nextBtn =
 document.getElementById("nextBtn");
 const title =
