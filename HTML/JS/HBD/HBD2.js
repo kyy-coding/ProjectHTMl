@@ -152,13 +152,13 @@ audio = new Audio('' + linkmp3.src);
       }, 1200); // Waktu setelah animasi mati selesai
     }
 
-    // Halaman 4: Pesan Akhir
+    // Halaman 6: Pesan Akhir
     function mulaiHal6() {
-      const stiker4 = document.getElementById('stiker4');
-      const stiker4a = document.getElementById('stiker4a');
-      const stiker4b = document.getElementById('stiker4b');
-      const stiker4c = document.getElementById('stiker4c');
-      stiker4.style = "transform:scale(1)";
+      const stiker6 = document.getElementById('stiker4');
+      const stiker6a = document.getElementById('stiker4a');
+      const stiker6b = document.getElementById('stiker4b');
+      const stiker6c = document.getElementById('stiker4c');
+      stiker6.style = "transform:scale(1)";
 
       new TypeIt("#teksCinta", {
         strings: txtDoa,
@@ -180,14 +180,14 @@ audio = new Audio('' + linkmp3.src);
                   document.querySelector("#teksLucu .ti-cursor").style.display = "none";
                   intervalHati = setInterval(hatiJatuh, 200);
                   document.querySelector(".tombol").style="transform:scale(1);opacity:1;";
-                  stiker4.style = "transform:scale(0)";
+                  stiker6.style = "transform:scale(0)";
                   setTimeout(() => {
-                    stiker4a.src = stiker4b.src;
+                    stiker6a.src = stiker4b.src;
                   }, 220);
                   setTimeout(() => {
-                    stiker4a.style = "display:block;transform:scaleX(1)";
-                    stiker4c.style = "display:block";
-                    stiker4.style = "transform:scale(.85)";
+                    stiker6a.style = "display:block;transform:scaleX(1)";
+                    stiker6c.style = "display:block";
+                    stiker6.style = "transform:scale(.85)";
                     clearInterval(scrollInterval);
                   }, 300);
                 }
