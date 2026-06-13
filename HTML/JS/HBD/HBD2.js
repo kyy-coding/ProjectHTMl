@@ -14,8 +14,8 @@
       type: "memory" 
       },
       { 
-      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background1.jpeg", 
-      sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker2.gif", 
+      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background.jpeg", 
+      sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker2.gif", 
       title: "Wakil Ketua Kelas", 
       text: "Wakil ketua kelas IX-A yang patut dijadikan motivasi bagi orang lain. Mampu memimpin teater IX-A dengan baik.", 
       type: "quote" 
@@ -59,7 +59,7 @@
     { id:3, icon:'🌺' },{ id:4, icon:'💝' },{ id:5, icon:'🎁' },{ id:6, icon:'💘' }
   ];
 
- const audioEl = document.getElementById("bgAudio");
+  const audioEl = document.getElementById("bgAudio");
   const nextBtn = document.getElementById("nextBtn");
   const titleEl = document.getElementById("title");
   const textEl = document.getElementById("text");
@@ -71,12 +71,14 @@
   const papanGame = document.getElementById("papanGame");
   const tiupBtn = document.getElementById("tiupBtn");
   const apiLilin = document.getElementById("apiLilin");
+  const stickerImg = document.getElementById("sticker");
   const particleCanvas = document.getElementById("particleCanvas");
   let ctx = null;
   let particles = [];
   let animationId = null;
   let particleActive = false;
 
+  // ========== PARTIKEL ==========
   function initParticleCanvas() {
     if (!particleCanvas) return;
     ctx = particleCanvas.getContext("2d");
@@ -96,7 +98,6 @@
     if (animationId) cancelAnimationFrame(animationId);
     particles = [];
     particleActive = true;
-    // Partikel berbentuk bintang dan lingkaran warna cerah (tidak Valentine)
     for (let i = 0; i < 160; i++) {
       particles.push({
         x: Math.random() * particleCanvas.width,
@@ -125,13 +126,11 @@
       p.y += p.vy;
       p.life -= p.decay;
       p.alpha = p.life * 0.8;
-      // Gambar lingkaran
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
       ctx.fillStyle = p.color;
       ctx.globalAlpha = p.alpha;
       ctx.fill();
-      // Gambar bintang kecil
       ctx.beginPath();
       for (let s = 0; s < 5; s++) {
         const angle = (s * 72 - 90) * Math.PI / 180;
@@ -162,6 +161,7 @@
     if (ctx) ctx.clearRect(0, 0, particleCanvas.width, particleCanvas.height);
   }
 
+  // ========== LOGIKA UTAMA ==========
   let currentPage = -1;
   let gameActive = false;
   let kartuDibuka = [];
@@ -177,18 +177,35 @@
     if (index >= CONFIG.pages.length) return;
     currentPage = index;
     const page = CONFIG.pages[currentPage];
+    
+    // Ganti background
     if (page.background) bgOverlay.style.backgroundImage = `url('${page.background}')`;
     titleEl.textContent = page.title || "";
     textEl.textContent = page.text || "";
+    
+    // Sembunyikan kontainer khusus
     memoryContainer.classList.add("sembunyi");
     giftContainer.classList.add("sembunyi");
     
+    // Atur stiker: tampilkan hanya jika halaman bukan memory/gift dan properti sticker ada
+    if (stickerImg) {
+      if (page.type !== "memory" && page.type !== "gift" && page.sticker && page.sticker !== "") {
+        stickerImg.src = page.sticker;
+        stickerImg.style.display = "block";
+      } else {
+        stickerImg.style.display = "none";
+        stickerImg.src = ""; // kosongkan src agar tidak request broken
+      }
+    }
+    
+    // Partikel hanya di halaman ending
     if (page.type !== "ending") {
       stopParticleEffect();
     } else {
       setTimeout(() => startParticleEffect(), 100);
     }
-
+    
+    // Navigasi sesuai tipe
     if (page.type === "memory") {
       memoryContainer.classList.remove("sembunyi");
       nextBtn.style.display = "none";
@@ -211,6 +228,7 @@
     animatePageTransition();
   }
 
+  // ========== MEMORY GAME ==========
   function acakKartu(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -247,7 +265,7 @@
         kartuDibuka = [];
         if (pasanganCocok === 6) {
           gameActive = false;
-          document.getElementById("statusGame").innerText = "✨ Selamat! Kamu menang ✨";
+          document.getElementById("statusGame").innerText = "Wuih, jago nih";
           setTimeout(() => pindahHal(currentPage + 1), 800);
         }
       } else {
@@ -260,6 +278,7 @@
     }
   }
 
+  // ========== TIUP LILIN ==========
   tiupBtn.addEventListener("click", () => {
     if (apiLilin && !apiLilin.classList.contains("mati")) {
       apiLilin.classList.add("mati");
@@ -268,6 +287,7 @@
     }
   });
 
+  // ========== TOMBOL LANJUT ==========
   nextBtn.addEventListener("click", () => {
     if (currentPage >= 0 && CONFIG.pages[currentPage].type !== "memory" && CONFIG.pages[currentPage].type !== "gift") {
       if (CONFIG.pages[currentPage].type !== "ending") {
@@ -276,6 +296,7 @@
     }
   });
 
+  // ========== BUKA AMPLOP ==========
   document.getElementById("btnBuka").addEventListener("click", () => {
     audioEl.play().catch(e=>console.log);
     const envelope = document.getElementById("envelope");
@@ -293,8 +314,11 @@
     }, 1000);
   });
 
+  // Inisialisasi
   initParticleCanvas();
   storyContainer.classList.add("sembunyi");
   memoryContainer.classList.add("sembunyi");
   giftContainer.classList.add("sembunyi");
   nextBtn.style.display = "none";
+  // Sembunyikan stiker awal
+  if (stickerImg) stickerImg.style.display = "none";
