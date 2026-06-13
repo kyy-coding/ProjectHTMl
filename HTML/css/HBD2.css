@@ -1,4 +1,4 @@
-  * {
+ * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -38,12 +38,13 @@
       0% { transform: scale(1); }
       100% { transform: scale(1.1); }
     }
+    /* Lingkaran animasi dekoratif (background) */
     .circ div {
       position: fixed;
       width: 60px;
       height: 60px;
       background: transparent;
-      border: 6px solid rgba(255,255,255,0.25);
+      border: 6px solid #f8e1e9;
       border-radius: 50%;
       pointer-events: none;
       z-index: 0;
@@ -62,6 +63,49 @@
       0% { transform: scale(0) translateY(0) rotate(0); opacity: 0.6; }
       100% { transform: scale(1.3) translateY(-90px) rotate(360deg); opacity: 0; }
     }
+
+    /* Segitiga siku-siku di pojok dalam message-box (bukan di luar layar) */
+    .message-box-corner {
+      position: relative;
+      overflow: visible;
+    }
+    .inner-corner-triangle {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 60px solid #f8e1e9;
+      border-left: 60px solid transparent;
+      z-index: 5;
+      pointer-events: none;
+      border-bottom-right-radius: 20px;
+    }
+    .inner-corner-triangle-left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 60px solid #f8e1e9;
+      border-right: 60px solid transparent;
+      z-index: 5;
+      pointer-events: none;
+      border-bottom-left-radius: 20px;
+    }
+    .inner-corner-triangle-top {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-top: 60px solid #f8e1e9;
+      border-left: 60px solid transparent;
+      z-index: 5;
+      pointer-events: none;
+      border-top-right-radius: 20px;
+    }
+
     /* HALAMAN AMPLOP */
     #hal1 {
       position: relative;
@@ -232,6 +276,7 @@
       padding: 20px;
     }
     #message-box {
+      position: relative; /* penting untuk segitiga absolute di dalamnya */
       background: rgba(255,255,255,0.15);
       backdrop-filter: blur(12px);
       border-radius: 36px;
@@ -239,6 +284,7 @@
       text-align: center;
       box-shadow: 0 12px 35px rgba(0,0,0,0.3);
       border: 2px solid rgba(255, 255, 255, 0.6);
+      overflow: hidden; /* biar segitiga tidak keluar dari border-radius */
     }
     #title {
       font-size: 1.8rem;
@@ -252,6 +298,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      position: relative;
+      z-index: 2;
     }
     #text {
       font-size: 1rem;
@@ -280,7 +328,7 @@
       background: #e11d48;
       transform: scale(1.02);
     }
-    /* ===== MEMORY GAME - BORDER PUTIH FULL RESPONSIVE ===== */
+    /* MEMORY GAME */
     .papanGame {
       display: grid;
       grid-template-columns: repeat(4, minmax(65px, 75px));
@@ -323,19 +371,18 @@
       background: rgba(255,215,215,0.85);
       transform: rotateY(180deg);
     }
-    /* ===== KUE DENGAN TOPPING PUTIH DAN LILIN ===== */
+    /* KUE */
     .gift-content {
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
     }
-    /* Judul Make a Wish di atas kue */
     .wish-title {
       font-size: 1.8rem;
       font-weight: bold;
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 10px;
       color: #fff5c4;
       text-shadow: 0 2px 8px rgba(0,0,0,0.5);
     }
@@ -376,7 +423,6 @@
       border-top: none;
       border-radius: 30px 30px 12px 12px;
     }
-    /* Krim putih (frosting) di setiap sela */
     .frosting {
       position: absolute;
       width: 100%;
@@ -388,10 +434,6 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       z-index: 2;
     }
-    .lapisan-bawah .frosting { bottom: -7px; }
-    .lapisan-tengah .frosting { bottom: -7px; }
-    .lapisan-atas .frosting { bottom: -7px; }
-    /* Sprinkle warna-warni */
     .sprinkle {
       position: absolute;
       width: 6px;
@@ -406,10 +448,9 @@
     .lapisan-atas .sprinkle:nth-child(4) { top: 18px; left: 75%; background: #ffff88; }
     .lapisan-atas .sprinkle:nth-child(5) { top: 28px; left: 85%; background: #ffaa66; }
     .lapisan-atas .sprinkle:nth-child(6) { top: 14px; left: 45%; background: #66ffaa; }
-    /* Lilin */
     .lilin-container {
       position: absolute;
-      top: -1px;
+      top: -32px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 15;
@@ -424,6 +465,7 @@
       position: relative;
     }
     .lilin::after {
+      content: "✨";
       position: absolute;
       font-size: 12px;
       bottom: -4px;
@@ -454,7 +496,6 @@
       0% { opacity: 1; transform: translateX(-50%) scale(1); }
       100% { opacity: 0; transform: translateX(-50%) scale(0); visibility: hidden; }
     }
-    /* Teks ajakan di bawah kue */
     .wish-instruction {
       text-align: center;
       margin-top: 15px;
@@ -465,17 +506,8 @@
       margin: 5px 0;
       text-shadow: 0 1px 2px rgba(0,0,0,0.4);
     }
-    #sticker {
-     display: block;
-     margin: 0 auto 15px;
-     max-width: 120px;
-     border-radius: 20px;
-     background: rgba(255,255,255,0.3);
-     padding: 8px;
-     backdrop-filter: blur(4px);
-     }
     #tiupBtn {
-      background: linear-gradient(145deg, #ffd9e6, #ffa5c0);
+      background: #ffb347;
       border: 2px solid white;
       border-radius: 60px;
       padding: 10px 32px;
@@ -492,6 +524,18 @@
       background: #ff8c00;
       transform: scale(1.02);
     }
+
+    /* CANVAS UNTUK EFEK PARTIKEL (halaman akhir) */
+    #particleCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 25;
+    }
+
     @media (max-width: 550px) {
       .papanGame {
         grid-template-columns: repeat(4, minmax(60px, 65px));
@@ -527,5 +571,11 @@
       }
       .wish-title {
         font-size: 1.4rem;
+      }
+      .inner-corner-triangle, .inner-corner-triangle-left, .inner-corner-triangle-top {
+        border-bottom-width: 40px;
+        border-left-width: 40px;
+        border-right-width: 40px;
+        border-top-width: 40px;
       }
     }
