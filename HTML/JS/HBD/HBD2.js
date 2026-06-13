@@ -59,7 +59,7 @@
     { id:3, icon:'🌺' },{ id:4, icon:'💝' },{ id:5, icon:'🎁' },{ id:6, icon:'💘' }
   ];
 
-  const audioEl = document.getElementById("bgAudio");
+ const audioEl = document.getElementById("bgAudio");
   const nextBtn = document.getElementById("nextBtn");
   const titleEl = document.getElementById("title");
   const textEl = document.getElementById("text");
@@ -71,6 +71,96 @@
   const papanGame = document.getElementById("papanGame");
   const tiupBtn = document.getElementById("tiupBtn");
   const apiLilin = document.getElementById("apiLilin");
+  const particleCanvas = document.getElementById("particleCanvas");
+  let ctx = null;
+  let particles = [];
+  let animationId = null;
+  let particleActive = false;
+
+  function initParticleCanvas() {
+    if (!particleCanvas) return;
+    ctx = particleCanvas.getContext("2d");
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+  }
+
+  function resizeCanvas() {
+    if (particleCanvas) {
+      particleCanvas.width = window.innerWidth;
+      particleCanvas.height = window.innerHeight;
+    }
+  }
+
+  function startParticleEffect() {
+    if (!ctx) initParticleCanvas();
+    if (animationId) cancelAnimationFrame(animationId);
+    particles = [];
+    particleActive = true;
+    // Partikel berbentuk bintang dan lingkaran warna cerah (tidak Valentine)
+    for (let i = 0; i < 160; i++) {
+      particles.push({
+        x: Math.random() * particleCanvas.width,
+        y: Math.random() * particleCanvas.height,
+        radius: Math.random() * 6 + 2,
+        vx: (Math.random() - 0.5) * 0.8,
+        vy: (Math.random() - 1.2) * 0.6 - 0.3,
+        color: `hsl(${Math.random() * 60 + 40}, 80%, 65%)`,
+        alpha: Math.random() * 0.7 + 0.3,
+        life: 1,
+        decay: 0.002 + Math.random() * 0.005
+      });
+    }
+    animateParticles();
+  }
+
+  function animateParticles() {
+    if (!particleActive || !ctx) return;
+    ctx.clearRect(0, 0, particleCanvas.width, particleCanvas.height);
+    let allDead = true;
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+      if (p.life <= 0) continue;
+      allDead = false;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.alpha = p.life * 0.8;
+      // Gambar lingkaran
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = p.alpha;
+      ctx.fill();
+      // Gambar bintang kecil
+      ctx.beginPath();
+      for (let s = 0; s < 5; s++) {
+        const angle = (s * 72 - 90) * Math.PI / 180;
+        const x1 = p.x + Math.cos(angle) * p.radius * 0.9;
+        const y1 = p.y + Math.sin(angle) * p.radius * 0.9;
+        if (s === 0) ctx.moveTo(x1, y1);
+        else ctx.lineTo(x1, y1);
+      }
+      ctx.closePath();
+      ctx.fillStyle = "#fff9c4";
+      ctx.globalAlpha = p.alpha * 0.6;
+      ctx.fill();
+    }
+    if (allDead) {
+      cancelAnimationFrame(animationId);
+      particleActive = false;
+      return;
+    }
+    animationId = requestAnimationFrame(animateParticles);
+  }
+
+  function stopParticleEffect() {
+    if (animationId) {
+      cancelAnimationFrame(animationId);
+      animationId = null;
+    }
+    particleActive = false;
+    if (ctx) ctx.clearRect(0, 0, particleCanvas.width, particleCanvas.height);
+  }
 
   let currentPage = -1;
   let gameActive = false;
@@ -90,18 +180,15 @@
     if (page.background) bgOverlay.style.backgroundImage = `url('${page.background}')`;
     titleEl.textContent = page.title || "";
     textEl.textContent = page.text || "";
-    const stickerImg = document.getElementById("sticker");
-    if (stickerImg) {
-      if (page.sticker && page.sticker !== "") {
-      stickerImg.src = page.sticker;
-      stickerImg.classList.remove("sembunyi");
-    } else {
-      stickerImg.classList.add("sembunyi");
-    }
-} 
     memoryContainer.classList.add("sembunyi");
     giftContainer.classList.add("sembunyi");
     
+    if (page.type !== "ending") {
+      stopParticleEffect();
+    } else {
+      setTimeout(() => startParticleEffect(), 100);
+    }
+
     if (page.type === "memory") {
       memoryContainer.classList.remove("sembunyi");
       nextBtn.style.display = "none";
@@ -109,10 +196,8 @@
     } else if (page.type === "gift") {
       giftContainer.classList.remove("sembunyi");
       nextBtn.style.display = "none";
-      // Reset api lilin (pastikan tidak dalam keadaan mati)
       if (apiLilin) {
         apiLilin.classList.remove("mati");
-        // Hapus style inline jika ada, dan reset animasi
         apiLilin.style.animation = "flicker 0.4s infinite alternate";
         apiLilin.style.visibility = "visible";
       }
@@ -162,7 +247,7 @@
         kartuDibuka = [];
         if (pasanganCocok === 6) {
           gameActive = false;
-          document.getElementById("statusGame").innerText = "✨ Wuih jago tuh ✨";
+          document.getElementById("statusGame").innerText = "✨ Selamat! Kamu menang ✨";
           setTimeout(() => pindahHal(currentPage + 1), 800);
         }
       } else {
@@ -175,15 +260,11 @@
     }
   }
 
-  // Event untuk tiup lilin
   tiupBtn.addEventListener("click", () => {
     if (apiLilin && !apiLilin.classList.contains("mati")) {
       apiLilin.classList.add("mati");
-      // Matikan animasi agar efek padam berjalan
       apiLilin.style.animation = "padam 0.8s forwards";
-      setTimeout(() => {
-        pindahHal(currentPage + 1);
-      }, 1000);
+      setTimeout(() => pindahHal(currentPage + 1), 1000);
     }
   });
 
@@ -212,6 +293,7 @@
     }, 1000);
   });
 
+  initParticleCanvas();
   storyContainer.classList.add("sembunyi");
   memoryContainer.classList.add("sembunyi");
   giftContainer.classList.add("sembunyi");
