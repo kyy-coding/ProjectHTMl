@@ -450,7 +450,7 @@
     .lapisan-atas .sprinkle:nth-child(6) { top: 14px; left: 45%; background: #66ffaa; }
     .lilin-container {
       position: absolute;
-      top: -32px;
+      top: -4px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 15;
