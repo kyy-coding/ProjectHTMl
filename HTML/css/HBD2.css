@@ -438,16 +438,16 @@
       position: absolute;
       width: 6px;
       height: 6px;
-      background: radial-gradient(circle, #ffe68f, #ffcc44);
+      background: rgba(255,255,255,0.15);
       border-radius: 50%;
       z-index: 5;
     }
-    .lapisan-atas .sprinkle:nth-child(1) { top: 10px; left: 15%; }
-    .lapisan-atas .sprinkle:nth-child(2) { top: 22px; left: 35%; background: #88ffdd; }
-    .lapisan-atas .sprinkle:nth-child(3) { top: 8px; left: 55%; background: #ff88dd; }
-    .lapisan-atas .sprinkle:nth-child(4) { top: 18px; left: 75%; background: #ffff88; }
+    .lapisan-atas .sprinkle:nth-child(1) { top: 10px; left: -10%; }
+    .lapisan-atas .sprinkle:nth-child(2) { top: 22px; left: 15%; background: #88ffdd; }
+    .lapisan-atas .sprinkle:nth-child(3) { top: 8px; left: 30%; background: #ff88dd; }
+    .lapisan-atas .sprinkle:nth-child(4) { top: 18px; left: 50%; background: #ffff88; }
     .lapisan-atas .sprinkle:nth-child(5) { top: 28px; left: 85%; background: #ffaa66; }
-    .lapisan-atas .sprinkle:nth-child(6) { top: 14px; left: 45%; background: #66ffaa; }
+    .lapisan-atas .sprinkle:nth-child(6) { top: 14px; left: 73%; background: #66ffaa; }
     .lilin-container {
       position: absolute;
       top: -4px;
