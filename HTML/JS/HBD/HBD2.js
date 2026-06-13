@@ -30,7 +30,7 @@
       { 
       background: "https://kyy-coding.github.io/ProjectHTMl/background/Background.jpg",
       sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker5.gif",    
-      text: "Walaupun hasilnya mungkin belum terlalu maksimal, tentunya kamu udah ngelakuin yang terbaik untuk kelas IX-A. Bukan cuman aktor dan aktris, kru, dan operator sound dan lighting yang berusaha semaksimal mungkin untuk IX-A. Pengalaman tersebut bisa berguna di masa depan yang akan mendatang.", 
+      text: "Walaupun hasilnya mungkin belum terlalu maksimal, tentunya kamu udah ngelakuin yang terbaik untuk kelas IX-A. Bukan cuman aktor dan aktris, kru, operator sound dan lighting juga berusaha semaksimal mungkin untuk IX-A. Pengalaman tersebut bisa berguna di masa depan yang akan mendatang.", 
       type: "quote"
       }, 
       { 
