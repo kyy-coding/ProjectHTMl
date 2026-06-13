@@ -2,37 +2,52 @@
     pages: [
       { 
       background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background1.jpeg", 
-      sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker2.gif",  
-      title: "Test", 
-      text: "Halo", 
+      sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker1.gif",  
+      title: "HALO NURIN", 
+      text: "Hari ini tanggal 14 Juni 2026 yak, pasti sudah tau lah yak ini apa. Seperti biasa aku gak bermaksud apa-apa dari html, cuma merayakan ulang tahun teman lewat html. Yuk diklik tombol lanjutnya.", 
       type: "welcome"
       },
       { 
       background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background3.jpeg", 
-      title: "🎮 Game Memori 🎮", 
+      title: "🎮 Memori Game 🎮", 
       text: "Cocokkan semua kartu untuk lanjut!", 
       type: "memory" 
       },
       { 
       background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background4.jpeg", 
-      sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker2.gif", 
-      title: "💖 Buat Kamu 💖", 
-      text: "Setiap senyummu adalah warna terindah dalam hariku.\nTeruslah bersinar!", 
-      type: "quote" },
+      sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker2.gif", 
+      title: "Wakil Ketua Kelas", 
+      text: "Wakil ketua kelas IX-A yang patut dijadikan motivasi untuk orang lain. Mampu memimpin teater IX-A dengan baik.", 
+      type: "quote" 
+      },
       { 
-      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background5.jpeg", 
-      title: "🎉 Semangat Baru 🎉", 
-      text: "Di usia baru ini, makin banyak mimpi yang terkabul. Aku selalu dukung kamu!", 
+      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background5.jpeg",
+      sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker4.gif",    
+      title: "Sosok Hanna", 
+      text: "Pasti gak asing kan yak dengan nama Hanna. Yak, pemeran utama selain Marry di teater IX-A yang memiliki makna mendalam.", 
       type: "quote"
       },
+      { 
+      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background5.jpeg",
+      sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker5.gif",    
+      text: "Walaupun hasilnya mungkin belum terlalu maksimal, tentunya kamu udah ngelakuin yang terbaik untuk kelas IX-A. Pengalaman tersebut bisa berguna di masa depan yang akan mendatang.", 
+      type: "quote"
+      }, 
+      { 
+      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background5.jpeg",
+      sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker6.gif",    
+      text: "Yahh, udah sampe di halaman terakhir yaa. Kalo gitu klik tombol lanjutnya buat ngeliat sesuatu", 
+      type: "quote"
+      },  
       { 
       background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background6.jpeg", 
       type: "gift"
       },
       {
       background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background7.jpeg", 
-      title: "🥳 Happy Birthday! 🥳", 
-      text: "Semoga semua impianmu terwujud. Terima kasih sudah menjadi dirimu yang luar biasa 💕\n\nLove, seseorang yang peduli ❤️", 
+       sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker7.gif",       
+      title: "🥳 Happy Birthday Raisa Nurin Nabila 🥳", 
+      text: "Semoga sehat selalu, panjang umur, menjadi teladan bagi orang lain, berbakti kepada kedua orang tua, dan keterima di sekolah impian.", 
       type: "ending" 
       }
     ]
@@ -147,7 +162,7 @@
         kartuDibuka = [];
         if (pasanganCocok === 6) {
           gameActive = false;
-          document.getElementById("statusGame").innerText = "✨ Selamat! Kamu menang ✨";
+          document.getElementById("statusGame").innerText = "✨ Wuih jago tuh ✨";
           setTimeout(() => pindahHal(currentPage + 1), 800);
         }
       } else {
