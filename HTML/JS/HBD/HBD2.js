@@ -17,20 +17,20 @@
       background: "https://kyy-coding.github.io/ProjectHTMl/background/Background.jpg", 
       sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker2.gif", 
       title: "Wakil Ketua Kelas", 
-      text: "Wakil ketua kelas IX-A yang patut dijadikan motivasi bagi orang lain. Mampu memimpin teater IX-A dengan baik.", 
+      text: "Wakil ketua kelas IX-A yang patut dijadikan motivasi bagi orang lain. Mampu memimpin dan berakting dengan baik dalam teater IX-A. Terutama, dalam memberikan ide pada bagian properti. Momen saat membuat properti seru toh?, well i miss that day.", 
       type: "quote" 
       },
       { 
       background: "https://kyy-coding.github.io/ProjectHTMl/background/Background.jpg",
       sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker4.gif",    
-      title: "Sosok Hanna", 
-      text: "Pasti gak asing kan yak dengan nama Hanna. Yak, pemeran utama selain Marry di teater IX-A yang memiliki makna mendalam.", 
+      title: "Sosok Hanna Yang Berusaha", 
+      text: "Pasti gak asing kan yak dengan nama Hanna. Yak, pemeran utama selain Marry di teater IX-A yang memiliki makna mendalam. Walaupun, terdapat sedikit masalah teknis pada bagian properti, sound dan lighting, aku salut kepada semua aktor dan aktris, terutama aktris utama yang mampu untuk improvisasi.", 
       type: "quote"
       },
       { 
       background: "https://kyy-coding.github.io/ProjectHTMl/background/Background.jpg",
       sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker5.gif",    
-      text: "Walaupun hasilnya mungkin belum terlalu maksimal, tentunya kamu udah ngelakuin yang terbaik untuk kelas IX-A. Pengalaman tersebut bisa berguna di masa depan yang akan mendatang.", 
+      text: "Walaupun hasilnya mungkin belum terlalu maksimal, tentunya kamu udah ngelakuin yang terbaik untuk kelas IX-A. Bukan cuman aktor dan aktris, kru, dan operator sound dan lighting yang berusaha semaksimal mungkin untuk IX-A. Pengalaman tersebut bisa berguna di masa depan yang akan mendatang.", 
       type: "quote"
       }, 
       { 
