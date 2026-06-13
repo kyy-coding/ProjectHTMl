@@ -14,8 +14,8 @@
       type: "memory" 
       },
       { 
-      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background.jpeg", 
-      sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker2.gif", 
+      background: "https://kyy-coding.github.io/ProjectHTMl/background/Background.jpg", 
+      sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker2.gif", 
       title: "Wakil Ketua Kelas", 
       text: "Wakil ketua kelas IX-A yang patut dijadikan motivasi bagi orang lain. Mampu memimpin teater IX-A dengan baik.", 
       type: "quote" 
@@ -36,7 +36,7 @@
       { 
       background: "https://kyy-coding.github.io/ProjectHTMl/background/Background.jpg",
       sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker6.gif",    
-      text: "Yahh, udah sampe di halaman terakhir yaa. Kalo gitu, sebelumnya aku minta maaf kalo ada salah selama di semester 1-2 kelas 9. Daripada kelamaan, yuk klik tombol lanjutnya buat ngeliat sesuatu", 
+      text: "Yahh, udah mau sampe di halaman terakhir yaa. Kalo gitu, sebelumnya aku minta maaf kalo ada salah selama di semester 1-2 kelas 9. Daripada kelamaan, yuk klik tombol lanjutnya buat ngeliat sesuatu", 
       type: "quote"
       },  
       { 
