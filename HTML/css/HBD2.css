@@ -438,6 +438,7 @@
       position: absolute;
       width: 6px;
       height: 6px;
+      left: -100%;
       background: rgba(255,255,255,0.15);
       border-radius: 50%;
       z-index: 5;
