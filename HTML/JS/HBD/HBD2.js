@@ -8,45 +8,45 @@
       type: "welcome"
       },
       { 
-      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background3.jpeg", 
+      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background1.jpeg", 
       title: "🎮 Memori Game 🎮", 
       text: "Cocokkan semua kartu untuk lanjut!", 
       type: "memory" 
       },
       { 
-      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background4.jpeg", 
+      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background1.jpeg", 
       sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker2.gif", 
       title: "Wakil Ketua Kelas", 
-      text: "Wakil ketua kelas IX-A yang patut dijadikan motivasi untuk orang lain. Mampu memimpin teater IX-A dengan baik.", 
+      text: "Wakil ketua kelas IX-A yang patut dijadikan motivasi bagi orang lain. Mampu memimpin teater IX-A dengan baik.", 
       type: "quote" 
       },
       { 
-      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background5.jpeg",
+      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background1.jpeg",
       sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker4.gif",    
       title: "Sosok Hanna", 
       text: "Pasti gak asing kan yak dengan nama Hanna. Yak, pemeran utama selain Marry di teater IX-A yang memiliki makna mendalam.", 
       type: "quote"
       },
       { 
-      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background5.jpeg",
+      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background1.jpeg",
       sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker5.gif",    
       text: "Walaupun hasilnya mungkin belum terlalu maksimal, tentunya kamu udah ngelakuin yang terbaik untuk kelas IX-A. Pengalaman tersebut bisa berguna di masa depan yang akan mendatang.", 
       type: "quote"
       }, 
       { 
-      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background5.jpeg",
+      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background1.jpeg",
       sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker6.gif",    
-      text: "Yahh, udah sampe di halaman terakhir yaa. Kalo gitu klik tombol lanjutnya buat ngeliat sesuatu", 
+      text: "Yahh, udah sampe di halaman terakhir yaa. Kalo gitu, sebelumnya aku minta maaf kalo ada salah selama di semester 1-2 kelas 9. Daripada kelamaan, yuk klik tombol lanjutnya buat ngeliat sesuatu", 
       type: "quote"
       },  
       { 
-      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background6.jpeg", 
+      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background1.jpeg", 
       type: "gift"
       },
       {
-      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background7.jpeg", 
+      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background1.jpeg", 
        sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker7.gif",       
-      title: "🥳 Happy Birthday Raisa Nurin Nabila 🥳", 
+      title: "Happy Birthday Raisa Nurin Nabila", 
       text: "Semoga sehat selalu, panjang umur, menjadi teladan bagi orang lain, berbakti kepada kedua orang tua, dan keterima di sekolah impian.", 
       type: "ending" 
       }
