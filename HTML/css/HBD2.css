@@ -464,8 +464,7 @@
       border: 1px solid #fff3cf;
       position: relative;
     }
-    .lilin::after {
-      content: "✨";
+    .lilin::after {    
       position: absolute;
       font-size: 12px;
       bottom: -4px;
