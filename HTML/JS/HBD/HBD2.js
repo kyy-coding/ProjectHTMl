@@ -1,255 +1,203 @@
-// config background, stiker, musik dan teks
-const audio =
-document.getElementById("linkmp3");
-const nextBtn =
-document.getElementById("nextBtn");
-const title =
-document.getElementById("title");
-const text =
-document.getElementById("text");
-const sticker =
-document.getElementById("sticker");
-const bg =
-document.querySelector(".background-overlay");
-//>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<//
-const CONFIG = {
-pages: [
-{
- background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background9.jpeg",
- sticker:"",
- title:"HAAAA",
- text:"hehehehehehee",
- type:"welcome"
-},
-{
- background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background3.jpeg",
- sticker:"",
- title:"HAIIIII",
- text:"",
- type:"memory"
-},
-{
- background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background4.jpeg",
- sticker:"",
- title:"HHHDHSHUHD",
- text:"hehehehe",
- type:"quote"
-},
-{
- background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background5.jpeg",
- sticker:"",
- title:"AAAAAA",
- text:"hehehehheheheh",
- type:"quote"
-},
-{
- background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background6.jpeg",
- type:"gift"
-},
-{
- background:"https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background7.jpeg",
- sticker:"",
- title:"ARAHABAKIIIII",
- text:"hehehehehe",
- type:"ending"
-        }
+   const CONFIG = {
+    pages: [
+      { 
+      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background1.jpeg", 
+      sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker2.gif",  
+      title: "Test", 
+      text: "Halo", 
+      type: "welcome"
+      },
+      { 
+      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background3.jpeg", 
+      title: "🎮 Game Memori 🎮", 
+      text: "Cocokkan semua kartu untuk lanjut!", 
+      type: "memory" 
+      },
+      { 
+      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background4.jpeg", 
+      sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker2.gif", 
+      title: "💖 Buat Kamu 💖", 
+      text: "Setiap senyummu adalah warna terindah dalam hariku.\nTeruslah bersinar!", 
+      type: "quote" },
+      { 
+      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background5.jpeg", 
+      title: "🎉 Semangat Baru 🎉", 
+      text: "Di usia baru ini, makin banyak mimpi yang terkabul. Aku selalu dukung kamu!", 
+      type: "quote"
+      },
+      { 
+      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background6.jpeg", 
+      type: "gift"
+      },
+      {
+      background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background7.jpeg", 
+      title: "🥳 Happy Birthday! 🥳", 
+      text: "Semoga semua impianmu terwujud. Terima kasih sudah menjadi dirimu yang luar biasa 💕\n\nLove, seseorang yang peduli ❤️", 
+      type: "ending" 
+      }
     ]
-};
+  };
 
-// Buka Envelope
-    function bukaEnvelope() {
-      audio.play();
-      const envelope = document.getElementById('envelope');
-      envelope.classList.remove('close');
-      envelope.classList.add('open');
-      document.querySelector(".reset").style="transform:scale(0);opacity:0;transition:all .7s ease";
-      setTimeout(() => {
-        document.querySelector("#envelope").style="transform:scale(0);opacity:0;transition:all .7s ease";
-        setTimeout(() => {
-        	pindahHal(0);
-            envelope.classList.remove('open');
-            envelope.classList.add('close');
-        }, 700);
-      }, 1200); // Transition to hal2 after animation
-    }
+  const kartuData = [
+    { id:1, icon:'🎉' },{ id:2, icon:'🥳' },{ id:3, icon:'🌺' },{ id:4, icon:'💝' },
+    { id:5, icon:'🎁' },{ id:6, icon:'💘' },{ id:1, icon:'🎉' },{ id:2, icon:'🥳' },
+    { id:3, icon:'🌺' },{ id:4, icon:'💝' },{ id:5, icon:'🎁' },{ id:6, icon:'💘' }
+  ];
 
-    // Halaman 2: Memory Game
-    let kartuDibuka = [];
-    let pasanganCocok = 0;
-    let gameJalan = false;
+  const audioEl = document.getElementById("bgAudio");
+  const nextBtn = document.getElementById("nextBtn");
+  const titleEl = document.getElementById("title");
+  const textEl = document.getElementById("text");
+  const bgOverlay = document.getElementById("bgOverlay");
+  const storyContainer = document.getElementById("story-container");
+  const hal1 = document.getElementById("hal1");
+  const memoryContainer = document.getElementById("memory-container");
+  const giftContainer = document.getElementById("gift-container");
+  const papanGame = document.getElementById("papanGame");
+  const tiupBtn = document.getElementById("tiupBtn");
+  const apiLilin = document.getElementById("apiLilin");
 
-    function acakKartu(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-      return array;
-    }
+  let currentPage = -1;
+  let gameActive = false;
+  let kartuDibuka = [];
+  let pasanganCocok = 0;
+  let currentCards = [];
 
-    function mulaiHal2() {
-	  kartuDibuka = [];
-	  pasanganCocok = 0;
-	  gameJalan = true;
-	  document.getElementById('kotakPesan').innerHTML = '';
-	  document.getElementById('lanjut').classList.add('sembunyi');
-	  document.getElementById('ulang').classList.add('sembunyi');
-	
-	  const papanGame = document.getElementById('papanGame');
-	  papanGame.innerHTML = '';
-  	  const kartuAcak = acakKartu([...kartu]);
-
-  	  kartuAcak.forEach((card, index) => {
-	    const elemenKartu = document.createElement('div');
-	    elemenKartu.className = 'kartu';
-	    elemenKartu.dataset.id = card.id;
-	    elemenKartu.innerHTML = `
-	      <div class="dalemKartu">
-	        <div class="depanKartu"></div>
-	        <div class="belakangKartu">${card.icon}</div>
-	      </div>
-	    `;
-	    elemenKartu.addEventListener('click', () => balikKartu(elemenKartu, card, index));
-	    papanGame.appendChild(elemenKartu);
-	  });
-	
-	  //mulaiKelopak('game-canvas');
-	  //   setTimeout(() => {
-	  //     if (pasanganCocok < 6 && gameJalan) selesaiGame(false);
-	  //   }, 60000);
-	}
-
-    function balikKartu(elemenKartu, card, index) {
-      if (!gameJalan || kartuDibuka.length >= 2 || elemenKartu.classList.contains('balik')) return;
-      elemenKartu.classList.add('balik');
-      kartuDibuka.push({ elemen: elemenKartu, card, index });
-
-      if (kartuDibuka.length === 2) {
-        const [kartu1, kartu2] = kartuDibuka;
-        if (kartu1.card.id === kartu2.card.id) {
-          pasanganCocok++;
-          
-          kartuDibuka = [];
-          if (pasanganCocok === 6) selesaiGame(true); 
-        } else {
-          setTimeout(() => {
-            kartu1.elemen.classList.remove('balik');
-            kartu2.elemen.classList.remove('balik');
-            kartuDibuka = [];
-          }, 570);
-        }
-      }
-    }
-
-    function selesaiGame(sukses) {
-     gameJalan = false;
-      if (sukses) {
-        setTimeout(() => {
-         pindahHal(2);
-    }, 700);
-  } 
-  else {
-    document
-      .getElementById('ulang')
-      .classList.remove('sembunyi');
+  function animatePageTransition() {
+    storyContainer.classList.add("page-transition");
+    setTimeout(() => storyContainer.classList.remove("page-transition"), 500);
   }
-}
-    // Fungsi Tiup Lilin
-    function tiupLilin() {
-      const api = document.getElementById('apiLilin');
-      api.classList.add('mati');
-      setTimeout(() => {
-        pindahHal(5);
-      }, 1200); // Waktu setelah animasi mati selesai
-    }
-    // Navigasi Halaman
-    let currentPage = -1;
 
-    loadPage(0);
-
-    function pindahHal(index){
-    if(index >= CONFIG.pages.length){
-        return;
-    }
+  function pindahHal(index) {
+    if (index >= CONFIG.pages.length) return;
     currentPage = index;
-    loadPage(index);
-    } 
-//Fungsi loadPage
-   function loadPage(index){
- document
-  .getElementById("story-container")
-  .classList.remove("sembunyi");
-	   
- const page = CONFIG.pages[index];
-
- title.textContent = page.title || "";
-
- text.textContent = page.text || "";
-
- if(page.sticker){
-    sticker.src = page.sticker;
- }
-
- bg.style.backgroundImage =
- `url(${page.background})`;
-
- // MEMORY GAME
- if(page.type === "memory"){
-
-    document
-      .getElementById("memory-container")
-      .classList.remove("sembunyi");
-
-    document
-      .getElementById("gift-container")
-      .classList.add("sembunyi");
-
-    mulaiHal2();
-
- }
-
- // HALAMAN HADIAH
- else if(page.type === "gift"){
-
-    document
-      .getElementById("memory-container")
-      .classList.add("sembunyi");
-
-    document
-      .getElementById("gift-container")
-      .classList.remove("sembunyi");
-
- }
-
- // HALAMAN BIASA
- else{
-
-    document
-      .getElementById("memory-container")
-      .classList.add("sembunyi");
-
-    document
-      .getElementById("gift-container")
-      .classList.add("sembunyi");
-
- }
-
-}
-nextBtn.onclick = () => {
-    const page =
-    CONFIG.pages[currentPage];
-    // Jangan lanjut otomatis
-    // saat game berlangsung
-
-    if(page.type === "memory"){
-        return;
+    const page = CONFIG.pages[currentPage];
+    if (page.background) bgOverlay.style.backgroundImage = `url('${page.background}')`;
+    titleEl.textContent = page.title || "";
+    textEl.textContent = page.text || "";
+    const stickerImg = document.getElementById("sticker");
+    if (stickerImg) {
+      if (page.sticker && page.sticker !== "") {
+      stickerImg.src = page.sticker;
+      stickerImg.classList.remove("sembunyi");
+    } else {
+      stickerImg.classList.add("sembunyi");
     }
-    if(page.type === "gift"){
-        return;
-    }
-    pindahHal(currentPage + 1);
-
-};
+} 
+    memoryContainer.classList.add("sembunyi");
+    giftContainer.classList.add("sembunyi");
     
-    const scrollContainer = document.getElementById("containerPesan");
-    function autoScroll() {scrollContainer.scrollTop += 10;} 
-    const scrollInterval = setInterval(autoScroll, 30); 
+    if (page.type === "memory") {
+      memoryContainer.classList.remove("sembunyi");
+      nextBtn.style.display = "none";
+      mulaiGameMemory();
+    } else if (page.type === "gift") {
+      giftContainer.classList.remove("sembunyi");
+      nextBtn.style.display = "none";
+      // Reset api lilin (pastikan tidak dalam keadaan mati)
+      if (apiLilin) {
+        apiLilin.classList.remove("mati");
+        // Hapus style inline jika ada, dan reset animasi
+        apiLilin.style.animation = "flicker 0.4s infinite alternate";
+        apiLilin.style.visibility = "visible";
+      }
+    } else {
+      if (page.type === "ending") {
+        nextBtn.style.display = "none";
+      } else {
+        nextBtn.style.display = "inline-block";
+      }
+    }
+    animatePageTransition();
+  }
+
+  function acakKartu(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  function mulaiGameMemory() {
+    gameActive = true;
+    kartuDibuka = [];
+    pasanganCocok = 0;
+    currentCards = acakKartu([...kartuData]);
+    papanGame.innerHTML = "";
+    currentCards.forEach((card, idx) => {
+      const kartuDiv = document.createElement("div");
+      kartuDiv.className = "kartu";
+      kartuDiv.dataset.id = card.id;
+      kartuDiv.innerHTML = `<div class="dalemKartu"><div class="depanKartu"></div><div class="belakangKartu">${card.icon}</div></div>`;
+      kartuDiv.addEventListener("click", () => balikKartu(kartuDiv, card, idx));
+      papanGame.appendChild(kartuDiv);
+    });
+    document.getElementById("statusGame").innerText = "";
+  }
+
+  function balikKartu(elemen, card, idx) {
+    if (!gameActive || elemen.classList.contains("balik") || kartuDibuka.length >= 2) return;
+    elemen.classList.add("balik");
+    kartuDibuka.push({ elemen, card, idx });
+    if (kartuDibuka.length === 2) {
+      const [k1, k2] = kartuDibuka;
+      if (k1.card.id === k2.card.id) {
+        pasanganCocok++;
+        kartuDibuka = [];
+        if (pasanganCocok === 6) {
+          gameActive = false;
+          document.getElementById("statusGame").innerText = "✨ Selamat! Kamu menang ✨";
+          setTimeout(() => pindahHal(currentPage + 1), 800);
+        }
+      } else {
+        setTimeout(() => {
+          k1.elemen.classList.remove("balik");
+          k2.elemen.classList.remove("balik");
+          kartuDibuka = [];
+        }, 700);
+      }
+    }
+  }
+
+  // Event untuk tiup lilin
+  tiupBtn.addEventListener("click", () => {
+    if (apiLilin && !apiLilin.classList.contains("mati")) {
+      apiLilin.classList.add("mati");
+      // Matikan animasi agar efek padam berjalan
+      apiLilin.style.animation = "padam 0.8s forwards";
+      setTimeout(() => {
+        pindahHal(currentPage + 1);
+      }, 1000);
+    }
+  });
+
+  nextBtn.addEventListener("click", () => {
+    if (currentPage >= 0 && CONFIG.pages[currentPage].type !== "memory" && CONFIG.pages[currentPage].type !== "gift") {
+      if (CONFIG.pages[currentPage].type !== "ending") {
+        pindahHal(currentPage + 1);
+      }
+    }
+  });
+
+  document.getElementById("btnBuka").addEventListener("click", () => {
+    audioEl.play().catch(e=>console.log);
+    const envelope = document.getElementById("envelope");
+    envelope.classList.remove("close");
+    envelope.classList.add("open");
+    document.querySelector(".reset").style.transform = "scale(0)";
+    setTimeout(() => {
+      envelope.style.transform = "scale(0)";
+      envelope.style.opacity = "0";
+      setTimeout(() => {
+        hal1.style.display = "none";
+        storyContainer.classList.remove("sembunyi");
+        pindahHal(0);
+      }, 500);
+    }, 1000);
+  });
+
+  storyContainer.classList.add("sembunyi");
+  memoryContainer.classList.add("sembunyi");
+  giftContainer.classList.add("sembunyi");
+  nextBtn.style.display = "none";
