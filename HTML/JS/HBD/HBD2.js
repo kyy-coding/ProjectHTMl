@@ -4,7 +4,7 @@
       background: "https://kyy-coding.github.io/ProjectHTMl/background/Background.jpg", 
       sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker1.gif",  
       title: "HALO NURIN", 
-      text: "Hari ini tanggal 14 Juni 2026 yak, pasti sudah tau lah yak ini apa. Seperti biasa aku gak bermaksud apa-apa dari html ini, cuma merayakan ulang tahun teman lewat html. Yuk diklik tombol lanjutnya.", 
+      text: "Hari ini tanggal 16 Juni 2026 yak, pasti sudah tau lah yak ini apa. Seperti biasa aku gak bermaksud apa-apa dari html ini, cuma merayakan ulang tahun teman lewat html. Yuk diklik tombol lanjutnya.", 
       type: "welcome"
       },
       { 
