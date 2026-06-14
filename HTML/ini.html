@@ -1,1 +1,1003 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Spesial Gift Buat Kamu 💞</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Handlee&family=Sriracha&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --color-flap: #6c9ebf;      /* biru lembut untuk amplop */
+      --color-env: #cfe3f0;
+      --color-env2: #9bb8d4;
+      --color-heart: #7fb4d0;      /* hati tetap ada tapi warna biru */
+      --color-sparkle: #c4e0fa;
+    }
+    body {
+      color: #fff;
+      overflow-x: hidden;
+      font-family: 'Montserrat', sans-serif;
+      background: #000;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .background-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.75;
+      z-index: 0;
+      animation: zoomBg 12s infinite alternate;
+    }
+    @keyframes zoomBg {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.1); }
+    }
+    .circ div {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      background: transparent;
+      border: 6px solid rgba(255,255,255,0.25);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .circ div:nth-child(1) { top: 12%; left: 42%; animation: animateCircle 10s linear infinite; }
+    .circ div:nth-child(2) { top: 70%; left: 50%; animation: animateCircle 7s linear infinite; }
+    .circ div:nth-child(3) { top: 17%; left: 6%; animation: animateCircle 9s linear infinite; }
+    .circ div:nth-child(4) { top: 20%; left: 60%; animation: animateCircle 10s linear infinite; }
+    .circ div:nth-child(5) { top: 67%; left: 10%; animation: animateCircle 6s linear infinite; }
+    .circ div:nth-child(6) { top: 80%; left: 70%; animation: animateCircle 12s linear infinite; }
+    .circ div:nth-child(7) { top: 60%; left: 80%; animation: animateCircle 15s linear infinite; }
+    .circ div:nth-child(8) { top: 32%; left: 25%; animation: animateCircle 16s linear infinite; }
+    .circ div:nth-child(9) { top: 90%; left: 25%; animation: animateCircle 9s linear infinite; }
+    .circ div:nth-child(10) { top: 20%; left: 80%; animation: animateCircle 5s linear infinite; }
+    @keyframes animateCircle {
+      0% { transform: scale(0) translateY(0) rotate(0); opacity: 0.6; }
+      100% { transform: scale(1.3) translateY(-90px) rotate(360deg); opacity: 0; }
+    }
 
+    /* Segitiga siku-siku di pojok message-box */
+    .inner-corner-triangle {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 60px solid rgba(140, 200, 230, 0.35);
+      border-left: 60px solid transparent;
+      z-index: 5;
+      pointer-events: none;
+      border-bottom-right-radius: 20px;
+    }
+    .inner-corner-triangle-left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 60px solid rgba(100, 180, 220, 0.3);
+      border-right: 60px solid transparent;
+      z-index: 5;
+      pointer-events: none;
+      border-bottom-left-radius: 20px;
+    }
+    .inner-corner-triangle-top {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-top: 60px solid rgba(120, 190, 230, 0.25);
+      border-left: 60px solid transparent;
+      z-index: 5;
+      pointer-events: none;
+      border-top-right-radius: 20px;
+    }
+
+    /* HALAMAN AMPLOP */
+    #hal1 {
+      position: relative;
+      z-index: 20;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      width: 100%;
+    }
+    .envlope-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    #envelope {
+      position: relative;
+      width: 200px;
+      height: 130px;
+      background-color: var(--color-flap);
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      cursor: pointer;
+      overflow: visible;
+    }
+    .front {
+      position: absolute;
+      width: 0;
+      height: 0;
+      z-index: 3;
+    }
+    .flap {
+      border-left: 100px solid transparent;
+      border-right: 100px solid transparent;
+      border-bottom: 65px solid transparent;
+      border-top: 65px solid var(--color-flap);
+      transform-origin: top;
+    }
+    .pocket {
+      border-left: 100px solid var(--color-env);
+      border-right: 100px solid var(--color-env);
+      border-bottom: 65px solid var(--color-env2);
+      border-top: 65px solid transparent;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    .letter {
+      position: absolute;
+      background: #e0d9dd;
+      width: 80%;
+      height: 70%;
+      left: 10%;
+      top: 12%;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      transition: all 0.4s ease;
+      z-index: 4;
+      overflow: hidden;
+    }
+    .message {
+      font-family: 'Handlee', cursive;
+      color: #4a7c9c;
+      text-align: center;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+    .close .letter {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.2s, transform 0.2s;
+      z-index: 1;
+    }
+    .open .letter {
+      opacity: 1;
+      transform: translateY(-58px) rotate(-2deg);
+      transition: opacity 0.4s 0.3s, transform 0.4s 0.3s;
+      z-index: 10;
+    }
+    .close .flap {
+      transform: rotateX(0deg);
+      transition: transform 0.4s 0.2s;
+      z-index: 5;
+    }
+    .open .flap {
+      transform: rotateX(180deg);
+      transition: transform 0.4s ease;
+      z-index: 2;
+    }
+    .hearts, .sparkles {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      pointer-events: none;
+    }
+    .heart, .sparkle { position: absolute; }
+    .heart:before, .heart:after {
+      content: "";
+      position: absolute;
+      left: 12.5px;
+      top: 0;
+      width: 12.5px;
+      height: 25px;
+      background: var(--color-heart);
+      border-radius: 12.5px 12.5px 0 0;
+      transform: rotate(-45deg);
+    }
+    .heart:after {
+      left: 0;
+      transform: rotate(45deg);
+    }
+    .sparkle {
+      width: 5px;
+      height: 5px;
+      background: var(--color-sparkle);
+      border-radius: 50%;
+      animation: sparkleTwinkle 1s infinite;
+    }
+    .a1 { left: 20%; animation: slideUp 4s infinite, sideSway 2s infinite alternate; }
+    .a2 { left: 55%; animation: slideUp 5s infinite, sideSway 4s infinite alternate; }
+    .a3 { left: 10%; animation: slideUp 7s infinite, sideSway 2s infinite alternate; }
+    .s1 { left: 30%; animation: sparkleUp 3s infinite; }
+    .s2 { left: 60%; animation: sparkleUp 4s infinite; }
+    .s3 { left: 45%; animation: sparkleUp 5s infinite; }
+    @keyframes slideUp { 0% { top: 0; } 100% { top: -600px; } }
+    @keyframes sideSway { 0% { margin-left: 0; } 100% { margin-left: 50px; } }
+    @keyframes sparkleUp { 0% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(-500px) rotate(360deg); opacity: 0; } }
+    @keyframes sparkleTwinkle { 0%,100% { transform: scale(1); } 50% { transform: scale(1.5); } }
+    
+    .reset button {
+      font-family: 'Sriracha', serif;
+      background-color: var(--color-flap);
+      border: 3px solid white;
+      border-radius: 60px;
+      color: white;
+      padding: 10px 28px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    }
+    .reset button:hover {
+      background: var(--color-env2);
+      transform: scale(1.05);
+    }
+    /* Animasi transisi halaman */
+    .page-transition {
+      animation: fadeSlide 0.5s ease forwards;
+    }
+    @keyframes fadeSlide {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .sembunyi { display: none !important; }
+    #story-container {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 550px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+    #message-box {
+      position: relative;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(12px);
+      border-radius: 36px;
+      padding: 25px 22px;
+      text-align: center;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      overflow: hidden;
+    }
+    /* Stiker */
+    #sticker {
+      display: block;
+      margin: 0 auto 15px;
+      max-width: 120px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.2);
+      padding: 5px;
+    }
+    #title {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+      text-align: center;
+    }
+    #containerPesan {
+      max-height: 380px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    #text {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      white-space: pre-line;
+      text-align: left;
+      width: 100%;
+    }
+    #nextBtn {
+      background: #2c7da0;
+      border: 2px solid white;
+      border-radius: 60px;
+      padding: 10px 26px;
+      font-weight: bold;
+      font-size: 1rem;
+      color: white;
+      cursor: pointer;
+      margin: 15px auto 0;
+      display: inline-block;
+      width: auto;
+      text-align: center;
+      transition: 0.2s;
+    }
+    #nextBtn:hover {
+      background: #1f5e7e;
+      transform: scale(1.02);
+    }
+    /* MEMORY GAME */
+    .papanGame {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(65px, 75px));
+      gap: 10px;
+      justify-content: center;
+      margin: 25px 0;
+      width: 100%;
+    }
+    .kartu {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      perspective: 500px;
+      cursor: pointer;
+    }
+    .dalemKartu {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s;
+      transform-style: preserve-3d;
+    }
+    .kartu.balik .dalemKartu {
+      transform: rotateY(180deg);
+    }
+    .depanKartu, .belakangKartu {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 18px;
+      backface-visibility: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.2);
+      border: 3px solid white !important;
+      font-size: 1.8rem;
+      box-sizing: border-box;
+    }
+    .belakangKartu {
+      background: rgba(200, 225, 245, 0.85);
+      transform: rotateY(180deg);
+    }
+    /* KUE SKY BLUE */
+    .gift-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .wish-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 10px;
+      color: #fff5c4;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+    .kue-container {
+      position: relative;
+      width: 220px;
+      height: 190px;
+      margin: 5px auto;
+    }
+    .kue {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 190px;
+    }
+    .lapisan {
+      width: 100%;
+      border-radius: 15px 15px 8px 8px;
+      position: relative;
+      border: 2px solid #fff9f0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .lapisan-bawah {
+      height: 60px;
+      background: linear-gradient(145deg, #7ec8e0, #4aa3c2);
+      border-radius: 20px 20px 12px 12px;
+    }
+    .lapisan-tengah {
+      height: 50px;
+      background: linear-gradient(145deg, #8fd6ec, #5cb6d4);
+      border-top: none;
+      margin-top: -4px;
+    }
+    .lapisan-atas {
+      height: 45px;
+      background: linear-gradient(145deg, #a6e0f0, #6ec3e0);
+      border-top: none;
+      border-radius: 30px 30px 12px 12px;
+    }
+    .frosting {
+      position: absolute;
+      width: 100%;
+      height: 14px;
+      background: rgba(255, 250, 240, 0.95);
+      border-radius: 20px;
+      bottom: -7px;
+      left: 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      z-index: 2;
+    }
+    .sprinkle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 50%;
+      z-index: 5;
+    }
+    .lapisan-atas .sprinkle:nth-child(1) { top: 10px; left: -10%; background: #ffffff; }
+    .lapisan-atas .sprinkle:nth-child(2) { top: 22px; left: 15%; background: #c0e0ff; }
+    .lapisan-atas .sprinkle:nth-child(3) { top: 8px; left: 30%; background: #e0f0ff; }
+    .lapisan-atas .sprinkle:nth-child(4) { top: 18px; left: 50%; background: #ffffff; }
+    .lapisan-atas .sprinkle:nth-child(5) { top: 28px; left: 85%; background: #b0d4f0; }
+    .lapisan-atas .sprinkle:nth-child(6) { top: 14px; left: 73%; background: #d0ecff; }
+    .lilin-container {
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 15;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+    }
+    .lilin {
+      width: 26px;
+      height: 48px;
+      background: linear-gradient(145deg, #ffe0b5, #ffcc88);
+      border-radius: 8px 8px 5px 5px;
+      border: 1px solid #fff3cf;
+      position: relative;
+    }
+    .lilin::after {
+      position: absolute;
+      font-size: 12px;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.7;
+    }
+    .api {
+      position: absolute;
+      top: -36px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 24px;
+      height: 36px;
+      background: radial-gradient(circle, #ffaa33, #ffdd99, rgba(255,200,100,0));
+      border-radius: 50% 50% 20% 20%;
+      animation: flicker 0.4s infinite alternate;
+      cursor: pointer;
+    }
+    @keyframes flicker {
+      0% { transform: translateX(-50%) scale(1); opacity: 0.95; }
+      100% { transform: translateX(-50%) scale(1.2); opacity: 1; }
+    }
+    .api.mati {
+      animation: padam 0.8s forwards;
+    }
+    @keyframes padam {
+      0% { opacity: 1; transform: translateX(-50%) scale(1); }
+      100% { opacity: 0; transform: translateX(-50%) scale(0); visibility: hidden; }
+    }
+    .wish-instruction {
+      text-align: center;
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+    .wish-instruction p {
+      font-size: 1rem;
+      margin: 5px 0;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    }
+    #tiupBtn {
+      background: #2c7da0;
+      border: 2px solid white;
+      border-radius: 60px;
+      padding: 10px 32px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+      margin-top: 5px;
+      display: inline-block;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    #tiupBtn:hover {
+      background: #1f5e7e;
+      transform: scale(1.02);
+    }
+
+    /* CANVAS UNTUK EFEK PARTIKEL (tema pegunungan: biru, hijau, putih) */
+    #particleCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 25;
+    }
+
+    @media (max-width: 550px) {
+      .papanGame {
+        grid-template-columns: repeat(4, minmax(60px, 65px));
+        gap: 8px;
+      }
+      .depanKartu, .belakangKartu {
+        font-size: 1.5rem;
+      }
+      #title {
+        font-size: 1.5rem;
+      }
+      #envelope {
+        width: 170px;
+        height: 110px;
+      }
+      .flap {
+        border-left: 85px solid transparent;
+        border-right: 85px solid transparent;
+        border-bottom: 55px solid transparent;
+        border-top: 55px solid var(--color-flap);
+      }
+      .pocket {
+        border-left: 85px solid var(--color-env);
+        border-right: 85px solid var(--color-env);
+        border-bottom: 55px solid var(--color-env2);
+        border-top: 55px solid transparent;
+      }
+      .open .letter {
+        transform: translateY(-50px) rotate(-2deg);
+      }
+      .kue-container {
+        transform: scale(0.9);
+      }
+      .wish-title {
+        font-size: 1.4rem;
+      }
+      .inner-corner-triangle, .inner-corner-triangle-left, .inner-corner-triangle-top {
+        border-bottom-width: 40px;
+        border-left-width: 40px;
+        border-right-width: 40px;
+        border-top-width: 40px;
+      }
+      #sticker {
+        max-width: 90px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="background-overlay" id="bgOverlay" style="background-image: url('https://kyy-coding.github.io/ProjectHTMl/background/Background.jpg');"></div>
+<div class="circ"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+
+<canvas id="particleCanvas"></canvas>
+
+<div id="hal1">
+  <div class="envlope-wrapper">
+    <div id="envelope" class="close">
+      <div class="front flap"></div>
+      <div class="front pocket"></div>
+      <div class="letter">
+        <div class="message"><p>💌 Ada Hadiah nih 💌</p></div>
+      </div>
+      <div class="hearts"><div class="heart a1"></div><div class="heart a2"></div><div class="heart a3"></div></div>
+      <div class="sparkles"><div class="sparkle s1"></div><div class="sparkle s2"></div><div class="sparkle s3"></div></div>
+    </div>
+  </div>
+  <div class="reset"><button id="btnBuka">Buka Amplop ✨</button></div>
+</div>
+
+<div id="story-container" class="sembunyi">
+  <div id="message-box">
+    <!-- Segitiga siku-siku di dalam message-box -->
+    <div class="inner-corner-triangle"></div>
+    <div class="inner-corner-triangle-left"></div>
+    <div class="inner-corner-triangle-top"></div>
+
+    <img id="sticker" src="" alt="Stiker" style="display: none;">
+
+    <h2 id="title"></h2>
+    <div id="containerPesan">
+      <p id="text"></p>
+      <button id="nextBtn" style="display: none;">Lanjut →</button>
+      <div id="memory-container" class="sembunyi">
+        <div id="papanGame" class="papanGame"></div>
+        <p id="statusGame" style="font-size: 0.9rem; text-align: center; margin-top: 8px;"></p>
+      </div>
+      <div id="gift-container" class="sembunyi">
+        <div class="gift-content">
+          <div class="wish-title">🎂 Make a Wish 🌙</div>
+          <div class="kue-container">
+            <div class="lilin-container">
+              <div class="lilin">
+                <div class="api" id="apiLilin"></div>
+              </div>
+            </div>
+            <div class="kue">
+              <div class="lapisan lapisan-atas">
+                <div class="frosting"></div>
+                <div class="sprinkle"></div><div class="sprinkle"></div><div class="sprinkle"></div><div class="sprinkle"></div><div class="sprinkle"></div><div class="sprinkle"></div>
+              </div>
+              <div class="lapisan lapisan-tengah">
+                <div class="frosting"></div>
+                <div class="sprinkle"></div><div class="sprinkle"></div><div class="sprinkle"></div>
+              </div>
+              <div class="lapisan lapisan-bawah">
+                <div class="frosting"></div>
+                <div class="sprinkle"></div><div class="sprinkle"></div><div class="sprinkle"></div>
+              </div>
+            </div>
+          </div>
+          <div class="wish-instruction">
+            <p>Tutup matamu, buat permintaan,<br>lalu tiup lilinnya yaw! 😊</p>
+          </div>
+          <button id="tiupBtn">🎂 Tiup Lilin 🎂</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<audio id="bgAudio" src="https://feeldreams.github.io/audio/angelbaby.mp3" preload="auto"></audio>
+
+<script>
+  // KONFIGURASI (tetap seperti permintaan user)
+  const CONFIG = {
+    pages: [
+      { 
+        background: "https://kyy-coding.github.io/ProjectHTMl/background/Background.jpg", 
+        sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker1.gif",  
+        title: "HALO RESA", 
+        text: "Hari ini tanggal 14 Juni 2026 yak. Sebelum lanjut, tolong tekan tombol lanjutnya pelan-pelan. Santai aja, gak usah buru-buru. Terus, catatan aku gak bermaksud apa-apa dari html, cuma merayakan ulang tahun teman lewat html. Yuk diklik tombol lanjutnya.", 
+        type: "welcome"
+      },
+      { 
+        background: "https://kyy-coding.github.io/ProjectHTMl/background/Background.jpg", 
+        title: "🎮 Memori Game 🎮", 
+        text: "Cocokkan semua kartu untuk lanjut!", 
+        type: "memory" 
+      },
+      { 
+        background: "https://kyy-coding.github.io/ProjectHTMl/background/Kobo/Background.jpeg", 
+        sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker2.gif", 
+        title: "Siswi dengan ambisi tinggi", 
+        text: "Kalo diliat-liat kamu ini orangnya berusaha maksimal yak. Buat masuk SMA impian mu. Walaupun yaa, mohon maaf gak keterima it's okey karena, sekolah di kota ini banyak yang kualitasnya bagus kok. Yang terpenting 1, sebagai siswi kamu wajib menuntut ilmu because, knowledge is important.", 
+        type: "quote" 
+      },
+      { 
+        background: "https://kyy-coding.github.io/ProjectHTMl/background/Background.jpg",
+        sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker4.gif",    
+        title: "Editor berkelas", 
+        text: "Pasti ingat dengan Festaba kan?. Editor desain yang berhasil membuat IX-A mendapat nominasi desain grafis terbaik 2. I appreciate that.", 
+        type: "quote"
+      },
+      { 
+        background: "https://kyy-coding.github.io/ProjectHTMl/background/Background.jpg",
+        sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker5.gif",    
+        text: "Walaupun hasilnya mungkin belum terlalu maksimal, tentunya kamu udah ngelakuin yang terbaik untuk kelas IX-A. Bakat desainer mu tentunya buat masa depan yang akan datang.", 
+        type: "quote"
+      }, 
+      { 
+        background: "https://kyy-coding.github.io/ProjectHTMl/background/Background.jpg",
+        sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker6.gif",    
+        text: "Yahh, udah sampe di halaman terakhir yaa. Kalo gitu, sebelumnya aku minta maaf kalo ada salah selama di semester 1-2 kelas 9. Daripada kelamaan, yuk klik tombol lanjutnya buat ngeliat sesuatu", 
+        type: "quote"
+      },  
+      { 
+        background: "https://kyy-coding.github.io/ProjectHTMl/background/Background.jpg", 
+        type: "gift"
+      },
+      {
+        background: "https://kyy-coding.github.io/ProjectHTMl/background/Background.jpg", 
+        sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker7.gif",       
+        title: "Happy Birthday Raisha Qaireena Aminandayu", 
+        text: "Semoga sehat selalu, panjang umur, menjadi teladan bagi orang lain, berbakti kepada kedua orang tua, dan keterima di sekolah impian.", 
+        type: "ending" 
+      }
+    ]
+  };
+
+  const kartuData = [
+    { id:1, icon:'🎉' },{ id:2, icon:'🥳' },{ id:3, icon:'🌺' },{ id:4, icon:'💝' },
+    { id:5, icon:'🎁' },{ id:6, icon:'💘' },{ id:1, icon:'🎉' },{ id:2, icon:'🥳' },
+    { id:3, icon:'🌺' },{ id:4, icon:'💝' },{ id:5, icon:'🎁' },{ id:6, icon:'💘' }
+  ];
+
+  const audioEl = document.getElementById("bgAudio");
+  const nextBtn = document.getElementById("nextBtn");
+  const titleEl = document.getElementById("title");
+  const textEl = document.getElementById("text");
+  const bgOverlay = document.getElementById("bgOverlay");
+  const storyContainer = document.getElementById("story-container");
+  const hal1 = document.getElementById("hal1");
+  const memoryContainer = document.getElementById("memory-container");
+  const giftContainer = document.getElementById("gift-container");
+  const papanGame = document.getElementById("papanGame");
+  const tiupBtn = document.getElementById("tiupBtn");
+  const apiLilin = document.getElementById("apiLilin");
+  const stickerImg = document.getElementById("sticker");
+  const particleCanvas = document.getElementById("particleCanvas");
+  let ctx = null;
+  let particles = [];
+  let animationId = null;
+  let particleActive = false;
+
+  // ========== PARTIKEL TEMA PEGUNUNGAN ==========
+  function initParticleCanvas() {
+    if (!particleCanvas) return;
+    ctx = particleCanvas.getContext("2d");
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+  }
+
+  function resizeCanvas() {
+    if (particleCanvas) {
+      particleCanvas.width = window.innerWidth;
+      particleCanvas.height = window.innerHeight;
+    }
+  }
+
+  function startParticleEffect() {
+    if (!ctx) initParticleCanvas();
+    if (animationId) cancelAnimationFrame(animationId);
+    particles = [];
+    particleActive = true;
+    // Warna alami pegunungan: biru langit, hijau daun, putih awan, abu-abu kabut
+    const colorPalette = [
+      "#8fcae3", "#b0d8f0", "#6bb5d0", "#4a90a4",  // biru
+      "#9bc4a0", "#b8d9b0", "#7faa7a", "#5c8f5a",  // hijau
+      "#e0f0f5", "#f0f8ff", "#ffffff",             // putih
+      "#b0bec5", "#90a4ae"                          // abu-abu lembut
+    ];
+    for (let i = 0; i < 180; i++) {
+      particles.push({
+        x: Math.random() * particleCanvas.width,
+        y: Math.random() * particleCanvas.height,
+        radius: Math.random() * 8 + 2,
+        vx: (Math.random() - 0.5) * 0.6,
+        vy: (Math.random() - 1.0) * 0.5 - 0.2,
+        color: colorPalette[Math.floor(Math.random() * colorPalette.length)],
+        alpha: Math.random() * 0.6 + 0.2,
+        life: 1,
+        decay: 0.0015 + Math.random() * 0.004,
+        shape: Math.random() > 0.6 ? "star" : "circle"
+      });
+    }
+    animateParticles();
+  }
+
+  function animateParticles() {
+    if (!particleActive || !ctx) return;
+    ctx.clearRect(0, 0, particleCanvas.width, particleCanvas.height);
+    let allDead = true;
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+      if (p.life <= 0) continue;
+      allDead = false;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.alpha = p.life * 0.7;
+      ctx.globalAlpha = p.alpha;
+      
+      if (p.shape === "circle") {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.fill();
+      } else {
+        // bentuk bintang/daun sederhana
+        ctx.beginPath();
+        for (let s = 0; s < 5; s++) {
+          const angle = (s * 72 - 90) * Math.PI / 180;
+          const x1 = p.x + Math.cos(angle) * p.radius;
+          const y1 = p.y + Math.sin(angle) * p.radius;
+          if (s === 0) ctx.moveTo(x1, y1);
+          else ctx.lineTo(x1, y1);
+        }
+        ctx.closePath();
+        ctx.fillStyle = p.color;
+        ctx.fill();
+      }
+    }
+    if (allDead) {
+      cancelAnimationFrame(animationId);
+      particleActive = false;
+      return;
+    }
+    animationId = requestAnimationFrame(animateParticles);
+  }
+
+  function stopParticleEffect() {
+    if (animationId) {
+      cancelAnimationFrame(animationId);
+      animationId = null;
+    }
+    particleActive = false;
+    if (ctx) ctx.clearRect(0, 0, particleCanvas.width, particleCanvas.height);
+  }
+
+  // ========== LOGIKA UTAMA ==========
+  let currentPage = -1;
+  let gameActive = false;
+  let kartuDibuka = [];
+  let pasanganCocok = 0;
+  let currentCards = [];
+
+  function animatePageTransition() {
+    storyContainer.classList.add("page-transition");
+    setTimeout(() => storyContainer.classList.remove("page-transition"), 500);
+  }
+
+  function pindahHal(index) {
+    if (index >= CONFIG.pages.length) return;
+    currentPage = index;
+    const page = CONFIG.pages[currentPage];
+    
+    if (page.background) bgOverlay.style.backgroundImage = `url('${page.background}')`;
+    titleEl.textContent = page.title || "";
+    textEl.textContent = page.text || "";
+    
+    memoryContainer.classList.add("sembunyi");
+    giftContainer.classList.add("sembunyi");
+    
+    // Atur stiker
+    if (stickerImg) {
+      if (page.type !== "memory" && page.type !== "gift" && page.sticker && page.sticker !== "") {
+        stickerImg.src = page.sticker;
+        stickerImg.style.display = "block";
+      } else {
+        stickerImg.style.display = "none";
+        stickerImg.src = "";
+      }
+    }
+    
+    // Partikel hanya di halaman ending (tema pegunungan)
+    if (page.type !== "ending") {
+      stopParticleEffect();
+    } else {
+      setTimeout(() => startParticleEffect(), 100);
+    }
+    
+    if (page.type === "memory") {
+      memoryContainer.classList.remove("sembunyi");
+      nextBtn.style.display = "none";
+      mulaiGameMemory();
+    } else if (page.type === "gift") {
+      giftContainer.classList.remove("sembunyi");
+      nextBtn.style.display = "none";
+      if (apiLilin) {
+        apiLilin.classList.remove("mati");
+        apiLilin.style.animation = "flicker 0.4s infinite alternate";
+        apiLilin.style.visibility = "visible";
+      }
+    } else {
+      if (page.type === "ending") {
+        nextBtn.style.display = "none";
+      } else {
+        nextBtn.style.display = "inline-block";
+      }
+    }
+    animatePageTransition();
+  }
+
+  function acakKartu(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  function mulaiGameMemory() {
+    gameActive = true;
+    kartuDibuka = [];
+    pasanganCocok = 0;
+    currentCards = acakKartu([...kartuData]);
+    papanGame.innerHTML = "";
+    currentCards.forEach((card, idx) => {
+      const kartuDiv = document.createElement("div");
+      kartuDiv.className = "kartu";
+      kartuDiv.dataset.id = card.id;
+      kartuDiv.innerHTML = `<div class="dalemKartu"><div class="depanKartu"></div><div class="belakangKartu">${card.icon}</div></div>`;
+      kartuDiv.addEventListener("click", () => balikKartu(kartuDiv, card, idx));
+      papanGame.appendChild(kartuDiv);
+    });
+    document.getElementById("statusGame").innerText = "";
+  }
+
+  function balikKartu(elemen, card, idx) {
+    if (!gameActive || elemen.classList.contains("balik") || kartuDibuka.length >= 2) return;
+    elemen.classList.add("balik");
+    kartuDibuka.push({ elemen, card, idx });
+    if (kartuDibuka.length === 2) {
+      const [k1, k2] = kartuDibuka;
+      if (k1.card.id === k2.card.id) {
+        pasanganCocok++;
+        kartuDibuka = [];
+        if (pasanganCocok === 6) {
+          gameActive = false;
+          document.getElementById("statusGame").innerText = "Wuih, jago nih";
+          setTimeout(() => pindahHal(currentPage + 1), 800);
+        }
+      } else {
+        setTimeout(() => {
+          k1.elemen.classList.remove("balik");
+          k2.elemen.classList.remove("balik");
+          kartuDibuka = [];
+        }, 700);
+      }
+    }
+  }
+
+  tiupBtn.addEventListener("click", () => {
+    if (apiLilin && !apiLilin.classList.contains("mati")) {
+      apiLilin.classList.add("mati");
+      apiLilin.style.animation = "padam 0.8s forwards";
+      setTimeout(() => pindahHal(currentPage + 1), 1000);
+    }
+  });
+
+  nextBtn.addEventListener("click", () => {
+    if (currentPage >= 0 && CONFIG.pages[currentPage].type !== "memory" && CONFIG.pages[currentPage].type !== "gift") {
+      if (CONFIG.pages[currentPage].type !== "ending") {
+        pindahHal(currentPage + 1);
+      }
+    }
+  });
+
+  document.getElementById("btnBuka").addEventListener("click", () => {
+    audioEl.play().catch(e=>console.log);
+    const envelope = document.getElementById("envelope");
+    envelope.classList.remove("close");
+    envelope.classList.add("open");
+    document.querySelector(".reset").style.transform = "scale(0)";
+    setTimeout(() => {
+      envelope.style.transform = "scale(0)";
+      envelope.style.opacity = "0";
+      setTimeout(() => {
+        hal1.style.display = "none";
+        storyContainer.classList.remove("sembunyi");
+        pindahHal(0);
+      }, 500);
+    }, 1000);
+  });
+
+  initParticleCanvas();
+  storyContainer.classList.add("sembunyi");
+  memoryContainer.classList.add("sembunyi");
+  giftContainer.classList.add("sembunyi");
+  nextBtn.style.display = "none";
+  if (stickerImg) stickerImg.style.display = "none";
+</script>
+</body>
+</html>
