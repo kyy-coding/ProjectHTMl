@@ -3,12 +3,12 @@
       padding: 0;
       box-sizing: border-box;
     }
-    :root {
-      --color-flap: #d46a84;
-      --color-env: #f8e1e9;
-      --color-env2: #D4AFB8;
-      --color-heart: #ff6f91;
-      --color-sparkle: #ffd1dc;
+   :root {
+      --color-flap: #7ec8e0;      /* biru langit cerah */
+      --color-env: #cceeff;
+      --color-env2: #add8e6;
+      --color-heart: #6ab0d6;
+      --color-sparkle: #c4e0fa;
     }
     body {
       color: #fff;
@@ -62,6 +62,45 @@
       0% { transform: scale(0) translateY(0) rotate(0); opacity: 0.6; }
       100% { transform: scale(1.3) translateY(-90px) rotate(360deg); opacity: 0; }
     }
+
+    /* Segitiga siku-siku di pojok message-box */
+   .inner-corner-triangle {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 60px solid rgba(120, 190, 230, 0.4);
+      border-left: 60px solid transparent;
+      z-index: 5;
+      pointer-events: none;
+      border-bottom-right-radius: 20px;
+    }
+    .inner-corner-triangle-left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 60px solid rgba(100, 180, 220, 0.35);
+      border-right: 60px solid transparent;
+      z-index: 5;
+      pointer-events: none;
+      border-bottom-left-radius: 20px;
+    }
+    .inner-corner-triangle-top {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-top: 60px solid rgba(140, 210, 240, 0.3);
+      border-left: 60px solid transparent;
+      z-index: 5;
+      pointer-events: none;
+      border-top-right-radius: 20px;
+    }
+
     /* HALAMAN AMPLOP */
     #hal1 {
       position: relative;
@@ -126,7 +165,7 @@
     }
     .message {
       font-family: 'Handlee', cursive;
-      color: #d46a84;
+      color: #4a7c9c;
       text-align: center;
       font-size: 0.9rem;
       display: flex;
@@ -232,6 +271,7 @@
       padding: 20px;
     }
     #message-box {
+      position: relative;
       background: rgba(255,255,255,0.15);
       backdrop-filter: blur(12px);
       border-radius: 36px;
@@ -239,6 +279,16 @@
       text-align: center;
       box-shadow: 0 12px 35px rgba(0,0,0,0.3);
       border: 2px solid rgba(255, 255, 255, 0.6);
+      overflow: hidden;
+    }
+    /* Stiker */
+    #sticker {
+      display: block;
+      margin: 0 auto 15px;
+      max-width: 120px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.2);
+      padding: 5px;
     }
     #title {
       font-size: 1.8rem;
@@ -252,6 +302,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      position: relative;
+      z-index: 2;
     }
     #text {
       font-size: 1rem;
@@ -262,7 +314,7 @@
       width: 100%;
     }
     #nextBtn {
-      background: #f43f5e;
+      background: #4aa3c2;
       border: 2px solid white;
       border-radius: 60px;
       padding: 10px 26px;
@@ -277,10 +329,10 @@
       transition: 0.2s;
     }
     #nextBtn:hover {
-      background: #e11d48;
+      background: #2c7da0;
       transform: scale(1.02);
     }
-    /* ===== MEMORY GAME - BORDER PUTIH FULL RESPONSIVE ===== */
+    /* MEMORY GAME */
     .papanGame {
       display: grid;
       grid-template-columns: repeat(4, minmax(65px, 75px));
@@ -320,17 +372,16 @@
       box-sizing: border-box;
     }
     .belakangKartu {
-      background: rgba(255,215,215,0.85);
+      background: rgba(200, 225, 245, 0.85);
       transform: rotateY(180deg);
     }
-    /* ===== KUE DENGAN TOPPING PUTIH DAN LILIN ===== */
+    /* KUE SKY BLUE */
     .gift-content {
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
     }
-    /* Judul Make a Wish di atas kue */
     .wish-title {
       font-size: 1.8rem;
       font-weight: bold;
@@ -361,22 +412,21 @@
     }
     .lapisan-bawah {
       height: 60px;
-      background: linear-gradient(145deg, #ffb6c1, #ff69b4);
+      background: linear-gradient(145deg, #7ec8e0, #4aa3c2);
       border-radius: 20px 20px 12px 12px;
     }
     .lapisan-tengah {
       height: 50px;
-      background: linear-gradient(145deg, #ffc0cb, #ff85a1);
+      background: linear-gradient(145deg, #8fd6ec, #5cb6d4);
       border-top: none;
       margin-top: -4px;
     }
     .lapisan-atas {
       height: 45px;
-      background: linear-gradient(145deg, #ffd9e6, #ffa5c0);
+      background: linear-gradient(145deg, #a6e0f0, #6ec3e0);
       border-top: none;
       border-radius: 30px 30px 12px 12px;
     }
-    /* Krim putih (frosting) di setiap sela */
     .frosting {
       position: absolute;
       width: 100%;
@@ -388,28 +438,24 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       z-index: 2;
     }
-    .lapisan-bawah .frosting { bottom: -7px; }
-    .lapisan-tengah .frosting { bottom: -7px; }
-    .lapisan-atas .frosting { bottom: -7px; }
-    /* Sprinkle warna-warni */
     .sprinkle {
       position: absolute;
       width: 6px;
       height: 6px;
-      background: radial-gradient(circle, #ffe68f, #ffcc44);
+      background: rgba(255,255,255,0.15);
+      left: -100%;
       border-radius: 50%;
       z-index: 5;
     }
-    .lapisan-atas .sprinkle:nth-child(1) { top: 10px; left: 15%; }
-    .lapisan-atas .sprinkle:nth-child(2) { top: 22px; left: 35%; background: #88ffdd; }
-    .lapisan-atas .sprinkle:nth-child(3) { top: 8px; left: 55%; background: #ff88dd; }
-    .lapisan-atas .sprinkle:nth-child(4) { top: 18px; left: 75%; background: #ffff88; }
-    .lapisan-atas .sprinkle:nth-child(5) { top: 28px; left: 85%; background: #ffaa66; }
-    .lapisan-atas .sprinkle:nth-child(6) { top: 14px; left: 45%; background: #66ffaa; }
-    /* Lilin */
+    .lapisan-atas .sprinkle:nth-child(1) { top: 10px; left: -10%; background:  #ffe68f; }
+    .lapisan-atas .sprinkle:nth-child(2) { top: 22px; left: 15%; background: #ff88dd; }
+    .lapisan-atas .sprinkle:nth-child(3) { top: 8px; left: 30%; background:  #ffaa66; }
+    .lapisan-atas .sprinkle:nth-child(4) { top: 18px; left: 50%; background: #ffffff; }
+    .lapisan-atas .sprinkle:nth-child(5) { top: 28px; left: 85%; background: #ffff88; }
+    .lapisan-atas .sprinkle:nth-child(6) { top: 14px; left: 73%; background: #d0ecff; }
     .lilin-container {
       position: absolute;
-      top: -1px;
+      top: -5px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 15;
@@ -438,7 +484,7 @@
       transform: translateX(-50%);
       width: 24px;
       height: 36px;
-      background: radial-gradient(circle, #ff6600, #ffcc33, rgba(255,100,0,0));
+      background: radial-gradient(circle, #ffaa33, #ffdd99, rgba(255,200,100,0));
       border-radius: 50% 50% 20% 20%;
       animation: flicker 0.4s infinite alternate;
       cursor: pointer;
@@ -454,7 +500,6 @@
       0% { opacity: 1; transform: translateX(-50%) scale(1); }
       100% { opacity: 0; transform: translateX(-50%) scale(0); visibility: hidden; }
     }
-    /* Teks ajakan di bawah kue */
     .wish-instruction {
       text-align: center;
       margin-top: 15px;
@@ -465,17 +510,8 @@
       margin: 5px 0;
       text-shadow: 0 1px 2px rgba(0,0,0,0.4);
     }
-    #sticker {
-     display: block;
-     margin: 0 auto 15px;
-     max-width: 120px;
-     border-radius: 20px;
-     background: rgba(255,255,255,0.3);
-     padding: 8px;
-     backdrop-filter: blur(4px);
-     }
     #tiupBtn {
-      background: linear-gradient(145deg, #ffd9e6, #ffa5c0);
+      background: #2c7da0;
       border: 2px solid white;
       border-radius: 60px;
       padding: 10px 32px;
@@ -489,9 +525,21 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
     #tiupBtn:hover {
-      background: #ff8c00;
+      background: #1f5e7e;
       transform: scale(1.02);
     }
+
+    /* CANVAS UNTUK EFEK PARTIKEL (tema pegunungan: biru, hijau, putih) */
+    #particleCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 25;
+    }
+
     @media (max-width: 550px) {
       .papanGame {
         grid-template-columns: repeat(4, minmax(60px, 65px));
@@ -527,5 +575,14 @@
       }
       .wish-title {
         font-size: 1.4rem;
+      }
+      .inner-corner-triangle, .inner-corner-triangle-left, .inner-corner-triangle-top {
+        border-bottom-width: 40px;
+        border-left-width: 40px;
+        border-right-width: 40px;
+        border-top-width: 40px;
+      }
+      #sticker {
+        max-width: 90px;
       }
     }
