@@ -78,42 +78,61 @@
   let animationId = null;
   let particleActive = false;
 
-  // ========== PARTIKEL ==========
+  // ========== PASSWORD ==========
+  const correctPassword = "1406";
+  const passwordPage = document.getElementById("passwordPage");
+  const passwordInput = document.getElementById("passwordInput");
+  const submitPassBtn = document.getElementById("submitPassword");
+  const passwordError = document.getElementById("passwordError");
+
+  submitPassBtn.addEventListener("click", () => {
+    if (passwordInput.value === correctPassword) {
+      passwordPage.style.display = "none";
+      hal1.style.display = "flex";
+    } else {
+      passwordError.textContent = "❌ Kode salah, coba lagi!";
+      passwordInput.value = "";
+    }
+  });
+  passwordInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") submitPassBtn.click();
+  });
+
+  // ========== PARTIKEL PEGUNUNGAN ==========
   function initParticleCanvas() {
     if (!particleCanvas) return;
     ctx = particleCanvas.getContext("2d");
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
   }
-
   function resizeCanvas() {
     if (particleCanvas) {
       particleCanvas.width = window.innerWidth;
       particleCanvas.height = window.innerHeight;
     }
   }
-
   function startParticleEffect() {
     if (!ctx) initParticleCanvas();
     if (animationId) cancelAnimationFrame(animationId);
     particles = [];
     particleActive = true;
-    for (let i = 0; i < 160; i++) {
+    const colorPalette = ["#a0d4f0","#b8e2f2","#8fcae3","#6bb5d0","#9bc4a0","#b8d9b0","#7faa7a","#e0f0f5","#f0f8ff","#ffffff"];
+    for (let i = 0; i < 180; i++) {
       particles.push({
         x: Math.random() * particleCanvas.width,
         y: Math.random() * particleCanvas.height,
-        radius: Math.random() * 6 + 2,
-        vx: (Math.random() - 0.5) * 0.8,
-        vy: (Math.random() - 1.2) * 0.6 - 0.3,
-        color: `hsl(${Math.random() * 60 + 40}, 80%, 65%)`,
-        alpha: Math.random() * 0.7 + 0.3,
+        radius: Math.random() * 8 + 2,
+        vx: (Math.random() - 0.5) * 0.6,
+        vy: (Math.random() - 1.0) * 0.5 - 0.2,
+        color: colorPalette[Math.floor(Math.random() * colorPalette.length)],
+        alpha: Math.random() * 0.6 + 0.2,
         life: 1,
-        decay: 0.002 + Math.random() * 0.005
+        decay: 0.0015 + Math.random() * 0.004,
+        shape: Math.random() > 0.6 ? "star" : "circle"
       });
     }
     animateParticles();
   }
-
   function animateParticles() {
     if (!particleActive || !ctx) return;
     ctx.clearRect(0, 0, particleCanvas.width, particleCanvas.height);
@@ -125,24 +144,26 @@
       p.x += p.vx;
       p.y += p.vy;
       p.life -= p.decay;
-      p.alpha = p.life * 0.8;
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = p.color;
+      p.alpha = p.life * 0.7;
       ctx.globalAlpha = p.alpha;
-      ctx.fill();
-      ctx.beginPath();
-      for (let s = 0; s < 5; s++) {
-        const angle = (s * 72 - 90) * Math.PI / 180;
-        const x1 = p.x + Math.cos(angle) * p.radius * 0.9;
-        const y1 = p.y + Math.sin(angle) * p.radius * 0.9;
-        if (s === 0) ctx.moveTo(x1, y1);
-        else ctx.lineTo(x1, y1);
+      if (p.shape === "circle") {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.fill();
+      } else {
+        ctx.beginPath();
+        for (let s = 0; s < 5; s++) {
+          const angle = (s * 72 - 90) * Math.PI / 180;
+          const x1 = p.x + Math.cos(angle) * p.radius;
+          const y1 = p.y + Math.sin(angle) * p.radius;
+          if (s === 0) ctx.moveTo(x1, y1);
+          else ctx.lineTo(x1, y1);
+        }
+        ctx.closePath();
+        ctx.fillStyle = p.color;
+        ctx.fill();
       }
-      ctx.closePath();
-      ctx.fillStyle = "#fff9c4";
-      ctx.globalAlpha = p.alpha * 0.6;
-      ctx.fill();
     }
     if (allDead) {
       cancelAnimationFrame(animationId);
@@ -151,12 +172,8 @@
     }
     animationId = requestAnimationFrame(animateParticles);
   }
-
   function stopParticleEffect() {
-    if (animationId) {
-      cancelAnimationFrame(animationId);
-      animationId = null;
-    }
+    if (animationId) cancelAnimationFrame(animationId);
     particleActive = false;
     if (ctx) ctx.clearRect(0, 0, particleCanvas.width, particleCanvas.height);
   }
@@ -177,35 +194,25 @@
     if (index >= CONFIG.pages.length) return;
     currentPage = index;
     const page = CONFIG.pages[currentPage];
-    
-    // Ganti background
     if (page.background) bgOverlay.style.backgroundImage = `url('${page.background}')`;
     titleEl.textContent = page.title || "";
     textEl.textContent = page.text || "";
-    
-    // Sembunyikan kontainer khusus
     memoryContainer.classList.add("sembunyi");
     giftContainer.classList.add("sembunyi");
     
-    // Atur stiker: tampilkan hanya jika halaman bukan memory/gift dan properti sticker ada
     if (stickerImg) {
       if (page.type !== "memory" && page.type !== "gift" && page.sticker && page.sticker !== "") {
         stickerImg.src = page.sticker;
         stickerImg.style.display = "block";
       } else {
         stickerImg.style.display = "none";
-        stickerImg.src = ""; // kosongkan src agar tidak request broken
+        stickerImg.src = "";
       }
     }
     
-    // Partikel hanya di halaman ending
-    if (page.type !== "ending") {
-      stopParticleEffect();
-    } else {
-      setTimeout(() => startParticleEffect(), 100);
-    }
+    if (page.type !== "ending") stopParticleEffect();
+    else setTimeout(() => startParticleEffect(), 100);
     
-    // Navigasi sesuai tipe
     if (page.type === "memory") {
       memoryContainer.classList.remove("sembunyi");
       nextBtn.style.display = "none";
@@ -219,16 +226,11 @@
         apiLilin.style.visibility = "visible";
       }
     } else {
-      if (page.type === "ending") {
-        nextBtn.style.display = "none";
-      } else {
-        nextBtn.style.display = "inline-block";
-      }
+      nextBtn.style.display = (page.type === "ending") ? "none" : "inline-block";
     }
     animatePageTransition();
   }
 
-  // ========== MEMORY GAME ==========
   function acakKartu(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -278,7 +280,6 @@
     }
   }
 
-  // ========== TIUP LILIN ==========
   tiupBtn.addEventListener("click", () => {
     if (apiLilin && !apiLilin.classList.contains("mati")) {
       apiLilin.classList.add("mati");
@@ -287,16 +288,12 @@
     }
   });
 
-  // ========== TOMBOL LANJUT ==========
   nextBtn.addEventListener("click", () => {
     if (currentPage >= 0 && CONFIG.pages[currentPage].type !== "memory" && CONFIG.pages[currentPage].type !== "gift") {
-      if (CONFIG.pages[currentPage].type !== "ending") {
-        pindahHal(currentPage + 1);
-      }
+      if (CONFIG.pages[currentPage].type !== "ending") pindahHal(currentPage + 1);
     }
   });
 
-  // ========== BUKA AMPLOP ==========
   document.getElementById("btnBuka").addEventListener("click", () => {
     audioEl.play().catch(e=>console.log);
     const envelope = document.getElementById("envelope");
@@ -314,11 +311,9 @@
     }, 1000);
   });
 
-  // Inisialisasi
   initParticleCanvas();
   storyContainer.classList.add("sembunyi");
   memoryContainer.classList.add("sembunyi");
   giftContainer.classList.add("sembunyi");
   nextBtn.style.display = "none";
-  // Sembunyikan stiker awal
   if (stickerImg) stickerImg.style.display = "none";
