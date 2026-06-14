@@ -440,121 +440,131 @@
       align-items: center;
       width: 100%;
     }
+    /* Judul Make a Wish di atas kue */
     .wish-title {
       font-size: 1.8rem;
       font-weight: bold;
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 50px;
       color: #fff5c4;
       text-shadow: 0 2px 8px rgba(0,0,0,0.5);
     }
     .kue-container {
       position: relative;
-      width: 210px;
-      height: 170px;
-      margin: 15px auto;
+      width: 220px;
+      height: 190px;
+      margin: 5px auto;
     }
     .kue {
       position: absolute;
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
-      width: 180px;
+      width: 190px;
     }
     .lapisan {
       width: 100%;
-      border-radius: 50% 50% 10% 10%;
-      border: 3px solid #fff;
+      border-radius: 15px 15px 8px 8px;
       position: relative;
+      border: 2px solid #fff9f0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     .lapisan-bawah {
-      height: 55px;
-      background: linear-gradient(to bottom, #ff99cc, #ff6699);
-      margin-top: -8px;
+      height: 60px;
+      background: linear-gradient(145deg, #ffb6c1, #ff69b4);
+      border-radius: 20px 20px 12px 12px;
     }
     .lapisan-tengah {
-      height: 45px;
-      background: linear-gradient(to bottom, #ffb3d9, #ff80bf);
-      margin-top: -12px;
+      height: 50px;
+      background: linear-gradient(145deg, #ffc0cb, #ff85a1);
       border-top: none;
+      margin-top: -4px;
     }
     .lapisan-atas {
-      height: 40px;
-      background: linear-gradient(to bottom, #ffccdd, #ff99cc);
+      height: 45px;
+      background: linear-gradient(145deg, #ffd9e6, #ffa5c0);
       border-top: none;
-      border-radius: 60% 60% 10% 10%;
+      border-radius: 30px 30px 12px 12px;
     }
-    /* Krim putih */
-    .krim {
+    /* Krim putih (frosting) di setiap sela */
+    .frosting {
       position: absolute;
-      width: 28px;
-      height: 28px;
-      background: white;
-      border-radius: 50%;
-      top: -16px;
+      width: 100%;
+      height: 14px;
+      background: rgba(255, 250, 240, 0.95);
+      border-radius: 20px;
+      bottom: -7px;
+      left: 0;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      z-index: 2;
     }
-    .lapisan-atas .krim:nth-child(1) { left: 20%; }
-    .lapisan-atas .krim:nth-child(2) { left: 50%; transform: translateX(-50%); }
-    .lapisan-atas .krim:nth-child(3) { right: 20%; }
-    /* Coklat bulat */
-    .coklat {
+    .lapisan-bawah .frosting { bottom: -7px; }
+    .lapisan-tengah .frosting { bottom: -7px; }
+    .lapisan-atas .frosting { bottom: -7px; }
+    /* Sprinkle warna-warni */
+    .sprinkle {
       position: absolute;
-      width: 9px;
-      height: 9px;
-      background: #3c2f2f;
+      width: 6px;
+      height: 6px;
+      background: radial-gradient(circle, #ffe68f, #ffcc44);
       border-radius: 50%;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+      z-index: 5;
     }
-    .lapisan-bawah .coklat:nth-child(1) { bottom: 10px; left: 11%; }
-    .lapisan-bawah .coklat:nth-child(2) { bottom: 14px; left: 32%; }
-    .lapisan-bawah .coklat:nth-child(3) { bottom: 12px; left: 54%; }
-    .lapisan-bawah .coklat:nth-child(4) { bottom: 16px; left: 73%; }
-    .lapisan-bawah .coklat:nth-child(5) { bottom: 11px; left: 85%; }
-    .lapisan-tengah .coklat:nth-child(1) { bottom: 12px; left: 15%; }
-    .lapisan-tengah .coklat:nth-child(2) { bottom: 16px; left: 38%; }
-    .lapisan-tengah .coklat:nth-child(3) { bottom: 13px; left: 60%; }
-    .lapisan-tengah .coklat:nth-child(4) { bottom: 15px; left: 82%; }
-    .lapisan-atas .coklat:nth-child(1) { bottom: 10px; left: 25%; }
-    .lapisan-atas .coklat:nth-child(2) { bottom: 14px; left: 48%; }
-    .lapisan-atas .coklat:nth-child(3) { bottom: 11px; left: 68%; }
+    .lapisan-atas .sprinkle:nth-child(1) { top: 10px; left: 15%; }
+    .lapisan-atas .sprinkle:nth-child(2) { top: 22px; left: 35%; background: #88ffdd; }
+    .lapisan-atas .sprinkle:nth-child(3) { top: 8px; left: 55%; background: #ff88dd; }
+    .lapisan-atas .sprinkle:nth-child(4) { top: 18px; left: 75%; background: #ffff88; }
+    .lapisan-atas .sprinkle:nth-child(5) { top: 28px; left: 85%; background: #ffaa66; }
+    .lapisan-atas .sprinkle:nth-child(6) { top: 14px; left: 45%; background: #66ffaa; }
     /* Lilin */
     .lilin-container {
       position: absolute;
-      top: -28px;
+      top: -1px;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 12;
+      z-index: 15;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
     }
     .lilin {
-      width: 22px;
-      height: 42px;
-      background: linear-gradient(to bottom, #f0e68c, #ffd700);
-      border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      width: 26px;
+      height: 48px;
+      background: linear-gradient(145deg, #ffe0b5, #ffcc88);
+      border-radius: 8px 8px 5px 5px;
+      border: 1px solid #fff3cf;
+      position: relative;
+    }
+    .lilin::after {
+      position: absolute;
+      font-size: 12px;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.7;
     }
     .api {
       position: absolute;
-      top: -32px;
-      left: 0;
-      width: 22px;
-      height: 32px;
-      background: radial-gradient(circle, #ff4500 20%, #ffaa33 70%, transparent);
+      top: -36px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 24px;
+      height: 36px;
+      background: radial-gradient(circle, #ff6600, #ffcc33, rgba(255,100,0,0));
       border-radius: 50% 50% 20% 20%;
       animation: flicker 0.4s infinite alternate;
       cursor: pointer;
     }
     @keyframes flicker {
-      0% { transform: scale(1); opacity: 0.95; }
-      100% { transform: scale(1.2); opacity: 1; }
+      0% { transform: translateX(-50%) scale(1); opacity: 0.95; }
+      100% { transform: translateX(-50%) scale(1.2); opacity: 1; }
     }
     .api.mati {
       animation: padam 0.8s forwards;
     }
     @keyframes padam {
-      0% { opacity: 1; transform: scale(1); }
-      100% { opacity: 0; transform: scale(0); visibility: hidden; }
+      0% { opacity: 1; transform: translateX(-50%) scale(1); }
+      100% { opacity: 0; transform: translateX(-50%) scale(0); visibility: hidden; }
     }
+    /* Teks ajakan di bawah kue */
     .wish-instruction {
       text-align: center;
       margin-top: 15px;
@@ -565,8 +575,17 @@
       margin: 5px 0;
       text-shadow: 0 1px 2px rgba(0,0,0,0.4);
     }
+    #sticker {
+     display: block;
+     margin: 0 auto 15px;
+     max-width: 120px;
+     border-radius: 20px;
+     background: rgba(255,255,255,0.3);
+     padding: 8px;
+     backdrop-filter: blur(4px);
+     }
     #tiupBtn {
-      background: var(--pink-btn);
+      background: linear-gradient(145deg, #ffd9e6, #ffa5c0);
       border: 2px solid white;
       border-radius: 60px;
       padding: 10px 32px;
@@ -580,10 +599,9 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
     #tiupBtn:hover {
-      background: #e11d48;
+      background: #ff8c00;
       transform: scale(1.02);
     }
-
     /* CANVAS PARTIKEL */
     #particleCanvas {
       position: fixed;
