@@ -4,11 +4,12 @@
       box-sizing: border-box;
     }
     :root {
-      --color-flap: #d46a84;
-      --color-env: #f8e1e9;
-      --color-env2: #D4AFB8;
-      --color-heart: #ff6f91;
-      --color-sparkle: #ffd1dc;
+      --color-flap: #f8b0c0;        /* pink lembut untuk amplop */
+      --color-env: #ffe0e8;
+      --color-env2: #f0b8c8;
+      --color-heart: #ff99bb;
+      --color-sparkle: #ffd9e6;
+      --pink-btn: #f43f5e;           /* warna pink untuk tombol */
     }
     body {
       color: #fff;
@@ -38,13 +39,12 @@
       0% { transform: scale(1); }
       100% { transform: scale(1.1); }
     }
-    /* Lingkaran animasi dekoratif (background) */
     .circ div {
       position: fixed;
       width: 60px;
       height: 60px;
       background: transparent;
-      border: 6px solid #f8e1e9;
+      border: 6px solid rgba(255,255,255,0.25);
       border-radius: 50%;
       pointer-events: none;
       z-index: 0;
@@ -64,18 +64,71 @@
       100% { transform: scale(1.3) translateY(-90px) rotate(360deg); opacity: 0; }
     }
 
-    /* Segitiga siku-siku di pojok dalam message-box (bukan di luar layar) */
-    .message-box-corner {
-      position: relative;
-      overflow: visible;
+    /* Password Page */
+    .password-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
     }
+    .password-box {
+      background: rgba(255,255,255,0.2);
+      border: 2px solid white;
+      border-radius: 36px;
+      padding: 30px 25px;
+      text-align: center;
+      backdrop-filter: blur(5px);
+      max-width: 90%;
+      width: 320px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+    .password-box h2 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+    .password-box input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 60px;
+      border: none;
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      background: rgba(255,255,255,0.9);
+    }
+    .password-box button {
+      background: var(--pink-btn);
+      border: none;
+      border-radius: 60px;
+      padding: 10px 20px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      font-size: 1rem;
+      transition: 0.2s;
+    }
+    .password-box button:hover {
+      background: #e11d48;
+      transform: scale(1.02);
+    }
+
+    /* Segitiga siku-siku di pojok message-box (tetap pinkish) */
     .inner-corner-triangle {
       position: absolute;
       bottom: 0;
       right: 0;
       width: 0;
       height: 0;
-      border-bottom: 60px solid #f8e1e9;
+      border-bottom: 60px solid rgba(255, 180, 200, 0.4);
       border-left: 60px solid transparent;
       z-index: 5;
       pointer-events: none;
@@ -87,7 +140,7 @@
       left: 0;
       width: 0;
       height: 0;
-      border-bottom: 60px solid #f8e1e9;
+      border-bottom: 60px solid rgba(255, 160, 190, 0.35);
       border-right: 60px solid transparent;
       z-index: 5;
       pointer-events: none;
@@ -99,7 +152,7 @@
       right: 0;
       width: 0;
       height: 0;
-      border-top: 60px solid #f8e1e9;
+      border-top: 60px solid rgba(255, 200, 220, 0.3);
       border-left: 60px solid transparent;
       z-index: 5;
       pointer-events: none;
@@ -170,7 +223,7 @@
     }
     .message {
       font-family: 'Handlee', cursive;
-      color: #d46a84;
+      color: #c25a7a;
       text-align: center;
       font-size: 0.9rem;
       display: flex;
@@ -243,7 +296,7 @@
     
     .reset button {
       font-family: 'Sriracha', serif;
-      background-color: var(--color-flap);
+      background-color: var(--pink-btn);
       border: 3px solid white;
       border-radius: 60px;
       color: white;
@@ -255,7 +308,7 @@
       box-shadow: 0 5px 20px rgba(0,0,0,0.3);
     }
     .reset button:hover {
-      background: var(--color-env2);
+      background: #e11d48;
       transform: scale(1.05);
     }
     /* Animasi transisi halaman */
@@ -276,7 +329,7 @@
       padding: 20px;
     }
     #message-box {
-      position: relative; /* penting untuk segitiga absolute di dalamnya */
+      position: relative;
       background: rgba(255,255,255,0.15);
       backdrop-filter: blur(12px);
       border-radius: 36px;
@@ -284,7 +337,15 @@
       text-align: center;
       box-shadow: 0 12px 35px rgba(0,0,0,0.3);
       border: 2px solid rgba(255, 255, 255, 0.6);
-      overflow: hidden; /* biar segitiga tidak keluar dari border-radius */
+      overflow: hidden;
+    }
+    #sticker {
+      display: block;
+      margin: 0 auto 15px;
+      max-width: 120px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.2);
+      padding: 5px;
     }
     #title {
       font-size: 1.8rem;
@@ -309,8 +370,9 @@
       text-align: left;
       width: 100%;
     }
+    /* Tombol Next (pink) */
     #nextBtn {
-      background: #f43f5e;
+      background: var(--pink-btn);
       border: 2px solid white;
       border-radius: 60px;
       padding: 10px 26px;
@@ -368,10 +430,10 @@
       box-sizing: border-box;
     }
     .belakangKartu {
-      background: rgba(255,215,215,0.85);
+      background: rgba(255, 200, 215, 0.85);
       transform: rotateY(180deg);
     }
-    /* KUE */
+    /* ===== KUE LAMA (pink dengan coklat bulat) ===== */
     .gift-content {
       display: flex;
       flex-direction: column;
@@ -382,119 +444,116 @@
       font-size: 1.8rem;
       font-weight: bold;
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 10px;
       color: #fff5c4;
       text-shadow: 0 2px 8px rgba(0,0,0,0.5);
     }
     .kue-container {
       position: relative;
-      width: 220px;
-      height: 190px;
-      margin: 5px auto;
+      width: 210px;
+      height: 170px;
+      margin: 15px auto;
     }
     .kue {
       position: absolute;
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
-      width: 190px;
+      width: 180px;
     }
     .lapisan {
       width: 100%;
-      border-radius: 15px 15px 8px 8px;
+      border-radius: 50% 50% 10% 10%;
+      border: 3px solid #fff;
       position: relative;
-      border: 2px solid #fff9f0;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     .lapisan-bawah {
-      height: 60px;
-      background: linear-gradient(145deg, #ffb6c1, #ff69b4);
-      border-radius: 20px 20px 12px 12px;
+      height: 55px;
+      background: linear-gradient(to bottom, #ff99cc, #ff6699);
+      margin-top: -8px;
     }
     .lapisan-tengah {
-      height: 50px;
-      background: linear-gradient(145deg, #ffc0cb, #ff85a1);
+      height: 45px;
+      background: linear-gradient(to bottom, #ffb3d9, #ff80bf);
+      margin-top: -12px;
       border-top: none;
-      margin-top: -4px;
     }
     .lapisan-atas {
-      height: 45px;
-      background: linear-gradient(145deg, #ffd9e6, #ffa5c0);
+      height: 40px;
+      background: linear-gradient(to bottom, #ffccdd, #ff99cc);
       border-top: none;
-      border-radius: 30px 30px 12px 12px;
+      border-radius: 60% 60% 10% 10%;
     }
-    .frosting {
+    /* Krim putih */
+    .krim {
       position: absolute;
-      width: 100%;
-      height: 14px;
-      background: rgba(255, 250, 240, 0.95);
-      border-radius: 20px;
-      bottom: -7px;
-      left: 0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      z-index: 2;
-    }
-    .sprinkle {
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      left: -100%;
-      background: rgba(255,255,255,0.15);
+      width: 28px;
+      height: 28px;
+      background: white;
       border-radius: 50%;
-      z-index: 5;
+      top: -16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    .lapisan-atas .sprinkle:nth-child(1) { top: 10px; left: -10%; }
-    .lapisan-atas .sprinkle:nth-child(2) { top: 22px; left: 15%; background: #88ffdd; }
-    .lapisan-atas .sprinkle:nth-child(3) { top: 8px; left: 30%; background: #ff88dd; }
-    .lapisan-atas .sprinkle:nth-child(4) { top: 18px; left: 50%; background: #ffff88; }
-    .lapisan-atas .sprinkle:nth-child(5) { top: 28px; left: 85%; background: #ffaa66; }
-    .lapisan-atas .sprinkle:nth-child(6) { top: 14px; left: 73%; background: #66ffaa; }
+    .lapisan-atas .krim:nth-child(1) { left: 20%; }
+    .lapisan-atas .krim:nth-child(2) { left: 50%; transform: translateX(-50%); }
+    .lapisan-atas .krim:nth-child(3) { right: 20%; }
+    /* Coklat bulat */
+    .coklat {
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      background: #3c2f2f;
+      border-radius: 50%;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+    .lapisan-bawah .coklat:nth-child(1) { bottom: 10px; left: 11%; }
+    .lapisan-bawah .coklat:nth-child(2) { bottom: 14px; left: 32%; }
+    .lapisan-bawah .coklat:nth-child(3) { bottom: 12px; left: 54%; }
+    .lapisan-bawah .coklat:nth-child(4) { bottom: 16px; left: 73%; }
+    .lapisan-bawah .coklat:nth-child(5) { bottom: 11px; left: 85%; }
+    .lapisan-tengah .coklat:nth-child(1) { bottom: 12px; left: 15%; }
+    .lapisan-tengah .coklat:nth-child(2) { bottom: 16px; left: 38%; }
+    .lapisan-tengah .coklat:nth-child(3) { bottom: 13px; left: 60%; }
+    .lapisan-tengah .coklat:nth-child(4) { bottom: 15px; left: 82%; }
+    .lapisan-atas .coklat:nth-child(1) { bottom: 10px; left: 25%; }
+    .lapisan-atas .coklat:nth-child(2) { bottom: 14px; left: 48%; }
+    .lapisan-atas .coklat:nth-child(3) { bottom: 11px; left: 68%; }
+    /* Lilin */
     .lilin-container {
       position: absolute;
-      top: -4px;
+      top: -28px;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 15;
-      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+      z-index: 12;
     }
     .lilin {
-      width: 26px;
-      height: 48px;
-      background: linear-gradient(145deg, #ffe0b5, #ffcc88);
-      border-radius: 8px 8px 5px 5px;
-      border: 1px solid #fff3cf;
-      position: relative;
-    }
-    .lilin::after {    
-      position: absolute;
-      font-size: 12px;
-      bottom: -4px;
-      left: 50%;
-      transform: translateX(-50%);
-      opacity: 0.7;
+      width: 22px;
+      height: 42px;
+      background: linear-gradient(to bottom, #f0e68c, #ffd700);
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
     .api {
       position: absolute;
-      top: -36px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 24px;
-      height: 36px;
-      background: radial-gradient(circle, #ff6600, #ffcc33, rgba(255,100,0,0));
+      top: -32px;
+      left: 0;
+      width: 22px;
+      height: 32px;
+      background: radial-gradient(circle, #ff4500 20%, #ffaa33 70%, transparent);
       border-radius: 50% 50% 20% 20%;
       animation: flicker 0.4s infinite alternate;
       cursor: pointer;
     }
     @keyframes flicker {
-      0% { transform: translateX(-50%) scale(1); opacity: 0.95; }
-      100% { transform: translateX(-50%) scale(1.2); opacity: 1; }
+      0% { transform: scale(1); opacity: 0.95; }
+      100% { transform: scale(1.2); opacity: 1; }
     }
     .api.mati {
       animation: padam 0.8s forwards;
     }
     @keyframes padam {
-      0% { opacity: 1; transform: translateX(-50%) scale(1); }
-      100% { opacity: 0; transform: translateX(-50%) scale(0); visibility: hidden; }
+      0% { opacity: 1; transform: scale(1); }
+      100% { opacity: 0; transform: scale(0); visibility: hidden; }
     }
     .wish-instruction {
       text-align: center;
@@ -507,7 +566,7 @@
       text-shadow: 0 1px 2px rgba(0,0,0,0.4);
     }
     #tiupBtn {
-      background: #ffb347;
+      background: var(--pink-btn);
       border: 2px solid white;
       border-radius: 60px;
       padding: 10px 32px;
@@ -521,11 +580,11 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
     #tiupBtn:hover {
-      background: #ff8c00;
+      background: #e11d48;
       transform: scale(1.02);
     }
 
-    /* CANVAS UNTUK EFEK PARTIKEL (halaman akhir) */
+    /* CANVAS PARTIKEL */
     #particleCanvas {
       position: fixed;
       top: 0;
@@ -577,5 +636,8 @@
         border-left-width: 40px;
         border-right-width: 40px;
         border-top-width: 40px;
+      }
+      #sticker {
+        max-width: 90px;
       }
     }
