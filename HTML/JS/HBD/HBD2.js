@@ -79,7 +79,7 @@
   let particleActive = false;
 
   // ========== PASSWORD ==========
-  const correctPassword = "140626RA";
+  const correctPassword = "160626RA";
   const passwordPage = document.getElementById("passwordPage");
   const passwordInput = document.getElementById("passwordInput");
   const submitPassBtn = document.getElementById("submitPassword");
