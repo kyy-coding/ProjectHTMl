@@ -729,4 +729,11 @@
       #sticker {
         max-width: 90px;
       }
+      .password-box {
+        padding: 30px 20px;
+        width: 85%;
+      }
+      .password-box h2 {
+        font-size: 1.6rem;
+      }    
     }
