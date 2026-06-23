@@ -938,7 +938,8 @@
             position: absolute;
             width: 6px;
             height: 6px;
-            background: var(--forest-light);
+            background:  rgba(255,255,255,0.15);
+            left: -100%;
             border-radius: 50%;
             z-index: 5;
             box-shadow: 0 0 8px rgba(163, 217, 165, 0.15);
@@ -990,7 +991,6 @@
             position: relative;
         }
         .lilin::after {
-            content: "🕯️";
             position: absolute;
             font-size: 12px;
             bottom: -4px;
