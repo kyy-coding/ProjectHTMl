@@ -8,8 +8,8 @@
                 type: "welcome"
             }, {
                 background: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80",
-                title: "✨ Konstelasi Bintang ✨",
-                text: "Hubungkan bintang-bintang di langit untuk membentuk konstelasi kita.\nKlik lanjut untuk memulai.",
+                title: "",
+                text: "",
                 type: "memory"
             }, {
                 background: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80",
