@@ -879,7 +879,7 @@
             font-size: 1.9rem;
             font-weight: 700;
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 50px;
             color: var(--forest-dark);
             text-shadow: 0 2px 12px rgba(47, 82, 51, 0.06);
             letter-spacing: 0.5px;
@@ -975,7 +975,7 @@
         }
         .lilin-container {
             position: absolute;
-            top: -32px;
+            top: -1px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 15;
