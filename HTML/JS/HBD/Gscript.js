@@ -13,19 +13,19 @@
                 type: "memory"
             }, {
                 background: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80",
-                sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker2.gif",
+                sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker8.gif",
                 title: "📜 Kenangan Pertama 📜",
                 text: "Siapa sih yang gak kenal Dyah?, murid dari kelas IX-A yang benar benar pintar.",
                 type: "quote"
             }, {
                 background: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80",
-                sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker4.gif",
+                sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker9.gif",
                 title: "📜 Kenangan Kedua 📜",
                 text: "Hal yang aku apresiasi dari kamu, yaitu kamu kalo kulihat tidak pernah sombong dengan kepintaranmu.",
                 type: "quote"
             }, {
                 background: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80",
-                sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker5.gif",
+                sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker10.gif",
                 text: "Kamu juga orangnya gak terlalu pendiam, masih bergaul dengan teman teman yang lain di kelas IX-A maupun diluar IX-A.",
                 type: "quote"
             }, {
