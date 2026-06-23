@@ -3,12 +3,12 @@
             pages: [{
                 background: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80",
                 sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker1.gif",
-                title: "🌲 Selamat Datang di Dyah! 🌲",
+                title: "🌲 Selamat Datang Dyah! 🌲",
                 text: "Hari ini tanggal 29 Juni 2026.\nSurat ini membawa keajaiban dari hutan Ghibli.\nKlik lanjut untuk memulai petualangan.",
                 type: "welcome"
             }, {
                 background: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80",
-                title: "✨ Konstelasi Bintang",
+                title: "✨ Konstelasi Bintang ✨",
                 text: "Hubungkan bintang-bintang di langit untuk membentuk konstelasi kita.\nKlik lanjut untuk memulai.",
                 type: "memory"
             }, {
@@ -350,7 +350,7 @@
             const reveal = document.getElementById("gameOverReveal");
             reveal.style.display = "block";
             document.getElementById("finalMessage").textContent = "🌟 Konstelasi Selesai!";
-            document.getElementById("finalSub").textContent = "Kamu berhasil menemukan konstelasi kita ✨";
+            document.getElementById("finalSub").textContent = "Kamu berhasil menemukan konstelasi nya! ✨";
             document.getElementById("gameContinueBtn").style.display = "inline-block";
             renderConstellation();
         }
@@ -608,7 +608,7 @@
                     hal1.style.display = "none";
                     storyContainer.classList.remove("sembunyi");
                     pindahHal(0);
-                }, 3500);
+                });
             }, 1000);
         });
 
