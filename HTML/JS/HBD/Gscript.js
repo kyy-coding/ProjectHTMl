@@ -3,8 +3,8 @@
             pages: [{
                 background: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80",
                 sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker1.gif",
-                title: "🌲 Selamat Datang di Hutan Ghibli",
-                text: "Hari ini tanggal 14 Juni 2026.\nSurat ini membawa keajaiban dari hutan Ghibli.\nKlik lanjut untuk memulai petualangan.",
+                title: "🌲 Selamat Datang di Dyah! 🌲",
+                text: "Hari ini tanggal 29 Juni 2026.\nSurat ini membawa keajaiban dari hutan Ghibli.\nKlik lanjut untuk memulai petualangan.",
                 type: "welcome"
             }, {
                 background: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80",
@@ -14,24 +14,24 @@
             }, {
                 background: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80",
                 sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Kobo/Sticker2.gif",
-                title: "📜 Kenangan Pertama",
-                text: "Wakil ketua kelas IX-A yang patut dijadikan motivasi bagi orang lain. Mampu memimpin teater IX-A dengan baik.",
+                title: "📜 Kenangan Pertama 📜",
+                text: "Siapa sih yang gak kenal Dyah?, murid dari kelas IX-A yang benar benar pintar.",
                 type: "quote"
             }, {
                 background: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80",
                 sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker4.gif",
-                title: "📜 Kenangan Kedua",
-                text: "Pasti gak asing kan yak dengan nama Hanna. Yak, pemeran utama selain Marry di teater IX-A yang memiliki makna mendalam.",
+                title: "📜 Kenangan Kedua 📜",
+                text: "Hal yang aku apresiasi dari kamu, yaitu kamu kalo kulihat tidak pernah sombong dengan kepintaranmu.",
                 type: "quote"
             }, {
                 background: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80",
                 sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker5.gif",
-                text: "Walaupun hasilnya mungkin belum terlalu maksimal, tentunya kamu udah ngelakuin yang terbaik untuk kelas IX-A. Pengalaman tersebut bisa berguna di masa depan yang akan mendatang.",
+                text: "Kamu juga orangnya gak terlalu pendiam, masih bergaul dengan teman teman yang lain di kelas IX-A maupun diluar IX-A.",
                 type: "quote"
             }, {
                 background: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80",
                 sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker6.gif",
-                text: "Yahh, udah sampe di halaman terakhir yaa. Kalo gitu, sebelumnya aku minta maaf kalo ada salah selama di semester 1-2 kelas 9. Daripada kelamaan, yuk klik tombol lanjutnya buat ngeliat sesuatu",
+                text: "Wahh, udah mau sampe dihalaman terakhir yaa. Kalo gitu aku gak banyak basa basi lagi. Sebelumnya aku minta maaf ya kalo ada salah dikelas IX, daripada kelamaan, yuk diklik tombol lanjutnya.",
                 type: "quote"
             }, {
                 background: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80",
@@ -39,7 +39,7 @@
             }, {
                 background: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80",
                 sticker: "https://kyy-coding.github.io/ProjectHTMl/Sticker/Cute/Sticker7.gif",
-                title: "🎉 Selamat Ulang Tahun! 🎉",
+                title: "Happy Birthday Dyah Hanum Puspaningrum",
                 text: "Semoga sehat selalu, panjang umur, menjadi teladan bagi orang lain, berbakti kepada kedua orang tua, dan keterima di sekolah impian.\n\n— Dari Hutan Ghibli —",
                 type: "ending"
             }]
